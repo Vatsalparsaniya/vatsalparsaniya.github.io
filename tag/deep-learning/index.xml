@@ -5,12 +5,174 @@
     <link>https://vatsalparsaniya.github.io/tag/deep-learning/</link>
       <atom:link href="https://vatsalparsaniya.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vatsalparsaniya.github.io/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_512x512_fill_lanczos_center_3.png</url>
       <title>Deep Learning</title>
       <link>https://vatsalparsaniya.github.io/tag/deep-learning/</link>
     </image>
+    
+    <item>
+      <title>SIIM ISIC Melanoma Classification</title>
+      <link>https://vatsalparsaniya.github.io/project/kaggle_siim_isic_melanoma_classification/</link>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://vatsalparsaniya.github.io/project/kaggle_siim_isic_melanoma_classification/</guid>
+      <description>&lt;h2 id=&#34;-siim-isic-melanoma-classification&#34;&gt;🔬 SIIM-ISIC-Melanoma-Classification&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://vatsalparsaniya.github.io/SIIM-ISIC-Melanoma-Classification/reports/figures/banner.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;-description&#34;&gt;📝 Description&lt;/h3&gt;
+&lt;p&gt;Skin cancer is the most prevalent type of cancer. Melanoma, specifically, is responsible for 75% of skin cancer deaths, despite being the least common skin cancer. The American Cancer Society estimates over 100,000 new melanoma cases will be diagnosed in 2020. It&amp;rsquo;s also expected that almost 7,000 people will die from the disease. As with other cancers, early and accurate detection—potentially aided by data science—can make treatment more effective.&lt;/p&gt;
+&lt;p&gt;Currently, dermatologists evaluate every one of a patient&amp;rsquo;s moles to identify outlier lesions or “ugly ducklings” that are most likely to be melanoma. Existing AI approaches have not adequately considered this clinical frame of reference. Dermatologists could enhance their diagnostic accuracy if detection algorithms take into account “contextual” images within the same patient to determine which images represent a melanoma. If successful, classifiers would be more accurate and could better support dermatological clinic work.&lt;/p&gt;
+&lt;p&gt;As the leading healthcare organization for informatics in medical imaging, the Society for &lt;a href=&#34;https://siim.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Imaging Informatics in Medicine (SIIM)&lt;/a&gt;&amp;rsquo;s mission is to advance medical imaging informatics through education, research, and innovation in a multi-disciplinary community. SIIM is joined by the &lt;a href=&#34;https://www.isic-archive.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International Skin Imaging Collaboration (ISIC)&lt;/a&gt;, an international effort to improve melanoma diagnosis. The ISIC Archive contains the largest publicly available collection of quality-controlled dermoscopic images of skin lesions.&lt;/p&gt;
+&lt;p&gt;In this competition, you’ll identify melanoma in images of skin lesions. In particular, you’ll use images within the same patient and determine which are likely to represent a melanoma. Using patient-level contextual information may help the development of image analysis tools, which could better support clinical dermatologists.&lt;/p&gt;
+&lt;p&gt;Melanoma is a deadly disease, but if caught early, most melanomas can be cured with minor surgery. Image analysis tools that automate the diagnosis of melanoma will improve dermatologists&amp;rsquo; diagnostic accuracy. Better detection of melanoma has the opportunity to positively impact millions of people.&lt;/p&gt;
+&lt;h3 id=&#34;-evaluation&#34;&gt;🔍 Evaluation&lt;/h3&gt;
+&lt;p&gt;Submissions are evaluated on &lt;a href=&#34;http://en.wikipedia.org/wiki/Receiver_operating_characteristic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;area under the ROC curve&lt;/a&gt; between the predicted probability and the observed target.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is AUC - ROC Curve?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AUC - ROC curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. It tells how much model is capable of distinguishing between classes. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.&lt;/p&gt;
+&lt;p&gt;The ROC curve is plotted with TPR against the FPR where TPR is on y-axis and FPR is on the x-axis.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://miro.medium.com/max/722/1*pk05QGzoWhCgRiiFbz-oKQ.png&#34; alt=&#34;ROC-AUC&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;▶ Here is the &lt;a href=&#34;https://youtu.be/4jRBRDbJemM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to a great video&lt;/a&gt; on roc-auc&lt;/p&gt;
+&lt;h2 id=&#34;-more-about-melanoma&#34;&gt;📝 More About Melanoma&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://media.giphy.com/media/3o85xJ2vIqjPGDA8HC/giphy.gif&#34; alt=&#34;Did you know?&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most serious type of skin cancer.&lt;/li&gt;
+&lt;li&gt;Melanoma occurs when the pigment-producing cells that give colour to the skin become cancerous.&lt;/li&gt;
+&lt;li&gt;Symptoms might include a new, unusual growth or a change in an existing mole. Melanomas can occur anywhere on the body.&lt;/li&gt;
+&lt;li&gt;Treatment may involve surgery, radiation, medication or in some cases, chemotherapy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;melanoma-hair-remove&#34;&gt;Melanoma Hair Remove&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/code/vatsalparsaniya/melanoma-hair-remove/notebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle Notebook (120+ ⭐)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There are many images with body hair covering the lesion so, hair remove operation can be useful for model focus on lesion part.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Method for hair remove using CV2&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hair_remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# convert image to grayScale&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;grayScale&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cvtColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;COLOR_RGB2GRAY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# kernel for morphologyEx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;kernel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getStructuringElement&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# apply MORPH_BLACKHAT to grayScale image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;blackhat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;morphologyEx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grayScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MORPH_BLACKHAT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kernel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# apply thresholding to blackhat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;threshold&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;threshold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blackhat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;THRESH_BINARY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# inpaint with original image and threshold image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;final_image&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inpaint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;threshold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;INPAINT_TELEA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;final_image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;results-of-above-mention-method&#34;&gt;results of above mention method&lt;/h5&gt;
+&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F167afd50ab11911426494c40b0dee656%2F4.png?generation=1594370870226580&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
+&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F03b23320df9ea9966efb09c2a60fc305%2F1.png?generation=1594370918408705&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
+&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F556392470cd28765aeaff2e4055a831d%2F3.png?generation=1594370944655636&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
+&lt;h5 id=&#34;visualizing-all-cv2-operations&#34;&gt;Visualizing all CV2 Operations&lt;/h5&gt;
+&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2Fb156694a1947ec2798d05bf321883ec3%2Findex.png?generation=1594370566397745&amp;amp;alt=media&#34; title=&#34;hover text&#34;&gt;
+&lt;h3 id=&#34;-abcde-rule&#34;&gt;✔ ABCDE Rule&lt;/h3&gt;
+&lt;p&gt;Use the “ABCDE rule” to look for some of the common signs of melanoma, one of the deadliest forms of skin cancer:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://fwderm.com/media/2017/05/ABCDEskincancer.jpg&#34; alt=&#34;ABCDE Rule&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;-ugly-duckling&#34;&gt;✔ Ugly Duckling&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;Ugly Duckling&lt;/strong&gt; is another warning sign of melanoma. This recognition strategy is based on the concept that most normal moles on your body resemble one another, while melanomas stand out like ugly ducklings in comparison. This highlights the importance of not just checking for irregularities, but also comparing any suspicious spot to surrounding moles to determine whether it looks different from its neighbours. These ugly duckling lesions or outlier lesions can be larger, smaller, lighter or darker, compared to surrounding moles. Also, isolated lesions without any surrounding moles for comparison are considered ugly ducklings.&lt;/p&gt;
+&lt;p&gt;Melanomas commonly appear on the legs of women, and the number one place they develop on men is the trunk.&lt;/p&gt;
+&lt;p&gt;Many other factors also play a role in increasing the risk for melanoma, including genetics (family history), skin type or colour, hair colour, freckling and number of moles on the body.&lt;/p&gt;
+&lt;h3 id=&#34;-these-factors-increase-your-melanoma-risk&#34;&gt;✔ These factors increase your melanoma risk&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Unprotected or excessive UV exposure from the sun or indoor tanning.&lt;/li&gt;
+&lt;li&gt;Weakened immune system due to a medical condition or medications.&lt;/li&gt;
+&lt;li&gt;Many moles: The more moles you have on your body, the higher your risk for melanoma. Also, having large moles (larger than a tip of a pencil eraser), or any atypical moles, increases the risk for melanoma.&lt;/li&gt;
+&lt;li&gt;Fair skin: Melanoma occurs more frequently in people with fair skin, light eyes and light or red hair.&lt;/li&gt;
+&lt;li&gt;Skin cancer history: People who have already had melanoma or nonmelanoma skin cancers run a greater risk of developing melanoma in the future.&lt;/li&gt;
+&lt;li&gt;Genetics: Melanoma can run in families – one in every 10 patients has a family member who also has had the disease.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Example Project</title>
