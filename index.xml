@@ -34,9 +34,9 @@
     
     <item>
       <title>SIIM ISIC Melanoma Classification</title>
-      <link>https://vatsalparsaniya.github.io/project/kaggle_siim_isic_melanoma_classification/</link>
-      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://vatsalparsaniya.github.io/project/kaggle_siim_isic_melanoma_classification/</guid>
+      <link>https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/</link>
+      <pubDate>Sat, 06 Aug 2022 17:27:58 +0530</pubDate>
+      <guid>https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/</guid>
       <description>&lt;h2 id=&#34;-siim-isic-melanoma-classification&#34;&gt;🔬 SIIM-ISIC-Melanoma-Classification&lt;/h2&gt;
 &lt;p&gt;
 
@@ -56,7 +56,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://vatsalparsaniya.github.io/SIIM-ISIC-Melanoma-Classification/reports/figures/banner.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Banner&#34; srcset=&#34;
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_996cb5cf97fd380d5ef82cd1d6ddfa7d.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_0cffd5f38bb6cf456c9e38fa592db5ea.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_996cb5cf97fd380d5ef82cd1d6ddfa7d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;160&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;-description&#34;&gt;📝 Description&lt;/h3&gt;
@@ -88,7 +95,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://miro.medium.com/max/722/1*pk05QGzoWhCgRiiFbz-oKQ.png&#34; alt=&#34;ROC-AUC&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;ROC-AUC&#34; srcset=&#34;
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_62aee84f1627585252560e6e74077c55.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_28e23efdf6d13af6e1217f8d6761c6e7.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_62aee84f1627585252560e6e74077c55.webp&#34;
+               width=&#34;361&#34;
+               height=&#34;330&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;▶ Here is the &lt;a href=&#34;https://youtu.be/4jRBRDbJemM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to a great video&lt;/a&gt; on roc-auc&lt;/p&gt;
@@ -111,7 +125,9 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://media.giphy.com/media/3o85xJ2vIqjPGDA8HC/giphy.gif&#34; alt=&#34;Did you know?&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;About Melanoma&#34;
+           src=&#34;https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/About_Melanoma.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;ul&gt;
@@ -123,7 +139,7 @@
 &lt;h2 id=&#34;melanoma-hair-remove&#34;&gt;Melanoma Hair Remove&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/code/vatsalparsaniya/melanoma-hair-remove/notebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle Notebook (120+ ⭐)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/code/vatsalparsaniya/melanoma-hair-remove/notebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Kaggle Notebook (120+ ⭐)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;There are many images with body hair covering the lesion so, hair remove operation can be useful for model focus on lesion part.&lt;/p&gt;
@@ -150,11 +166,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;final_image&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;results-of-above-mention-method&#34;&gt;results of above mention method&lt;/h5&gt;
-&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F167afd50ab11911426494c40b0dee656%2F4.png?generation=1594370870226580&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
-&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F03b23320df9ea9966efb09c2a60fc305%2F1.png?generation=1594370918408705&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
-&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2F556392470cd28765aeaff2e4055a831d%2F3.png?generation=1594370944655636&amp;amp;alt=media&#34; width=&#34;450&#34; title=&#34;hover text&#34;&gt;
-&lt;h5 id=&#34;visualizing-all-cv2-operations&#34;&gt;Visualizing all CV2 Operations&lt;/h5&gt;
-&lt;img src=&#34;https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2907842%2Fb156694a1947ec2798d05bf321883ec3%2Findex.png?generation=1594370566397745&amp;amp;alt=media&#34; title=&#34;hover text&#34;&gt;
+&lt;img src=&#34;remove_hair_1.png&#34; width=&#34;400&#34; title=&#34;Hair Remove Image - 1&#34;&gt;
+&lt;img src=&#34;remove_hair_2.png&#34; width=&#34;400&#34; title=&#34;Hair Remove Image - 2&#34;&gt;
+&lt;img src=&#34;remove_hair_3.png&#34; width=&#34;400&#34; title=&#34;Hair Remove Image - 3&#34;&gt;
+&lt;h5 id=&#34;visualizing-step-wise-cv2-operations&#34;&gt;Visualizing step-wise CV2 Operations&lt;/h5&gt;
+&lt;img src=&#34;cv2_operation.png&#34; title=&#34;Step Wise CV2 operations&#34;&gt;
 &lt;h3 id=&#34;-abcde-rule&#34;&gt;✔ ABCDE Rule&lt;/h3&gt;
 &lt;p&gt;Use the “ABCDE rule” to look for some of the common signs of melanoma, one of the deadliest forms of skin cancer:&lt;/p&gt;
 &lt;p&gt;
@@ -175,7 +191,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://fwderm.com/media/2017/05/ABCDEskincancer.jpg&#34; alt=&#34;ABCDE Rule&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;ABCDE Rule&#34; srcset=&#34;
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_2efcc48ce1cfb0d32948cb0e29bb6830.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_59eab9428ca377bc24d44ceedf4de576.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_2efcc48ce1cfb0d32948cb0e29bb6830.webp&#34;
+               width=&#34;512&#34;
+               height=&#34;511&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;-ugly-duckling&#34;&gt;✔ Ugly Duckling&lt;/h3&gt;
@@ -191,85 +214,6 @@
 &lt;li&gt;Skin cancer history: People who have already had melanoma or nonmelanoma skin cancers run a greater risk of developing melanoma in the future.&lt;/li&gt;
 &lt;li&gt;Genetics: Melanoma can run in families – one in every 10 patients has a family member who also has had the disease.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Wowchemy, the website builder for Hugo</title>
-      <link>https://vatsalparsaniya.github.io/post/getting-started/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://vatsalparsaniya.github.io/post/getting-started/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
-&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23MadeWithWowchemy&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/hugo-tutorials/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Tutorial&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
-&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
 </description>
     </item>
     

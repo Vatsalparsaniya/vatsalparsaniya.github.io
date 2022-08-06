@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Learning | Vatsal Parsaniya</title>
-    <link>https://vatsalparsaniya.github.io/tag/deep-learning/</link>
-      <atom:link href="https://vatsalparsaniya.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
-    <description>Deep Learning</description>
+    <title>Computer Vision | Vatsal Parsaniya</title>
+    <link>https://vatsalparsaniya.github.io/category/computer-vision/</link>
+      <atom:link href="https://vatsalparsaniya.github.io/category/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computer Vision</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 06 Aug 2022 17:27:58 +0530</lastBuildDate>
     <image>
       <url>https://vatsalparsaniya.github.io/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_512x512_fill_lanczos_center_3.png</url>
-      <title>Deep Learning</title>
-      <link>https://vatsalparsaniya.github.io/tag/deep-learning/</link>
+      <title>Computer Vision</title>
+      <link>https://vatsalparsaniya.github.io/category/computer-vision/</link>
     </image>
     
     <item>
