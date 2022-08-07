@@ -5,7 +5,7 @@
     <link>https://vatsalparsaniya.github.io/tag/computer-vision/</link>
       <atom:link href="https://vatsalparsaniya.github.io/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     <description>Computer Vision</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 06 Aug 2022 17:27:58 +0530</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 12 Apr 2021 19:26:00 +0530</lastBuildDate>
     <image>
       <url>https://vatsalparsaniya.github.io/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_512x512_fill_lanczos_center_3.png</url>
       <title>Computer Vision</title>
@@ -13,9 +13,372 @@
     </image>
     
     <item>
+      <title>Yolo Segmentation Chess</title>
+      <link>https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/</link>
+      <pubDate>Mon, 12 Apr 2021 19:26:00 +0530</pubDate>
+      <guid>https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;♔♕♗♘♙♚♛♝♞♟♖♜&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The camera captures the image of chessboard then the image is analyzed using image processing to identify the moves made by an opponent and stockfish engine calculates the best possible move.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;method-of-working&#34;&gt;Method of Working&lt;/h1&gt;
+&lt;h2 id=&#34;step---1&#34;&gt;Step - 1&lt;/h2&gt;
+&lt;h3 id=&#34;image-transformation&#34;&gt;Image Transformation&lt;/h3&gt;
+&lt;h1 id=&#34;image-transformation-1&#34;&gt;Image Transformation&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;transform&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/transform_hu56f441112ac55526bf2b537b91f978bb_17678_8acb42019a461debec2995a534296e8b.webp 400w,
+               /project/yolo_segmentation_chess/transform_hu56f441112ac55526bf2b537b91f978bb_17678_060e96139ab1d7f261f373713a0e4f34.webp 760w,
+               /project/yolo_segmentation_chess/transform_hu56f441112ac55526bf2b537b91f978bb_17678_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/transform_hu56f441112ac55526bf2b537b91f978bb_17678_8acb42019a461debec2995a534296e8b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;603&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With help of unet model mask chess board and detect chess baord corner points with help of opencv operations. and apply warp perspective transformation on it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Input-Frame&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;warp-perspective&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;locate-boxes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Input-Frame&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/input-frame_hubd3a15255f0f2bded916054f682577f3_244723_5a4b1861250666a7aa95485730210703.webp 400w,
+               /project/yolo_segmentation_chess/input-frame_hubd3a15255f0f2bded916054f682577f3_244723_28c967918aa8dc2de3e05a034123415d.webp 760w,
+               /project/yolo_segmentation_chess/input-frame_hubd3a15255f0f2bded916054f682577f3_244723_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/input-frame_hubd3a15255f0f2bded916054f682577f3_244723_5a4b1861250666a7aa95485730210703.webp&#34;
+               width=&#34;489&#34;
+               height=&#34;539&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;warp-perspective&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/warpperspective_hue76f004c8de5331dbddbc34aec87df1b_629574_d8f8c3fee4bd7c5a3eb2e00c90243152.webp 400w,
+               /project/yolo_segmentation_chess/warpperspective_hue76f004c8de5331dbddbc34aec87df1b_629574_5aa44429d57fbbaa51248a4078ae1661.webp 760w,
+               /project/yolo_segmentation_chess/warpperspective_hue76f004c8de5331dbddbc34aec87df1b_629574_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/warpperspective_hue76f004c8de5331dbddbc34aec87df1b_629574_d8f8c3fee4bd7c5a3eb2e00c90243152.webp&#34;
+               width=&#34;735&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;locate-boxes&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/locate-boxes_hu8fd0d8f1e796a58e28722d3045dcfcbb_762378_5ec9fd9dd06bb0443d37ade9f3876077.webp 400w,
+               /project/yolo_segmentation_chess/locate-boxes_hu8fd0d8f1e796a58e28722d3045dcfcbb_762378_0686a5f45d47119ae072766d91929e0c.webp 760w,
+               /project/yolo_segmentation_chess/locate-boxes_hu8fd0d8f1e796a58e28722d3045dcfcbb_762378_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/locate-boxes_hu8fd0d8f1e796a58e28722d3045dcfcbb_762378_5ec9fd9dd06bb0443d37ade9f3876077.webp&#34;
+               width=&#34;730&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;step---2&#34;&gt;Step - 2&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Image1 : Image of Chess Board befor player move piece&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Image2 : Image of Chess Board after player move piece&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;2&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/2_huae1c0f4730ac1072928805490649bbdd_131009_8f3c20e5ce5a13a8a72332331f3e6307.webp 400w,
+               /project/yolo_segmentation_chess/2_huae1c0f4730ac1072928805490649bbdd_131009_144f6f2bec497f1338350dac11ec77c1.webp 760w,
+               /project/yolo_segmentation_chess/2_huae1c0f4730ac1072928805490649bbdd_131009_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/2_huae1c0f4730ac1072928805490649bbdd_131009_8f3c20e5ce5a13a8a72332331f3e6307.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;3&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/3_hu8698b25ac533cbca79149f84e247407d_130310_d95c2650043fa939a4c345120f48566c.webp 400w,
+               /project/yolo_segmentation_chess/3_hu8698b25ac533cbca79149f84e247407d_130310_717879b51e2accaa1a45c5d3ddfcd6ed.webp 760w,
+               /project/yolo_segmentation_chess/3_hu8698b25ac533cbca79149f84e247407d_130310_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/3_hu8698b25ac533cbca79149f84e247407d_130310_d95c2650043fa939a4c345120f48566c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;step---3&#34;&gt;step - 3&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Difference of image by using function absdiff in CV2&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Change Difference_image to Gray scale image&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;diff = cv2.absdiff(image1,image2)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;diff_gray = cv2.cvtColor(diff,cv2.COLOR_BGR2GRAY)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;2&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/Difference_image_hu2267777ffc8d9030c9b958b0de05d937_88975_4c34578bf2d08b4a908427343e3abc58.webp 400w,
+               /project/yolo_segmentation_chess/Difference_image_hu2267777ffc8d9030c9b958b0de05d937_88975_0800bbe472bc12443cdc58f05e2c6c43.webp 760w,
+               /project/yolo_segmentation_chess/Difference_image_hu2267777ffc8d9030c9b958b0de05d937_88975_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/Difference_image_hu2267777ffc8d9030c9b958b0de05d937_88975_4c34578bf2d08b4a908427343e3abc58.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;3&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/Difference_GrayScale_image_hu8461c664fde61ad67174661b265e777b_74645_779ee610f17d1f5bea430c2fdbac4d15.webp 400w,
+               /project/yolo_segmentation_chess/Difference_GrayScale_image_hu8461c664fde61ad67174661b265e777b_74645_dad80674347c925bf7e80d506623b1a6.webp 760w,
+               /project/yolo_segmentation_chess/Difference_GrayScale_image_hu8461c664fde61ad67174661b265e777b_74645_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/Difference_GrayScale_image_hu8461c664fde61ad67174661b265e777b_74645_779ee610f17d1f5bea430c2fdbac4d15.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;step---4&#34;&gt;step - 4&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Apply thresholding on Grayscale image&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Find Contours on threshold image&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;matrix,thresold = cv2.threshold(diff_gray,value,255,cv2.THRESH_BINARY)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;cnts,_ = cv2.findContours(thresold, cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;Threshold_image&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/Threshold_image_hu5736e9c5c2e3e21b7d8a6a97854f280d_11162_106171bbbe7d129eb64cb26727b37504.webp 400w,
+               /project/yolo_segmentation_chess/Threshold_image_hu5736e9c5c2e3e21b7d8a6a97854f280d_11162_9ea638d825dc0848f46058fbb6508307.webp 760w,
+               /project/yolo_segmentation_chess/Threshold_image_hu5736e9c5c2e3e21b7d8a6a97854f280d_11162_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/Threshold_image_hu5736e9c5c2e3e21b7d8a6a97854f280d_11162_106171bbbe7d129eb64cb26727b37504.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&amp;amp;ldquo;show_Contours&amp;amp;rdquo;&#34; srcset=&#34;
+               /project/yolo_segmentation_chess/show_Contours_hu2267777ffc8d9030c9b958b0de05d937_90603_99265c52cfbccc37ab77ca363b3f3e51.webp 400w,
+               /project/yolo_segmentation_chess/show_Contours_hu2267777ffc8d9030c9b958b0de05d937_90603_3c4d7c1a9cbdc76978b4f982c9acfdb1.webp 760w,
+               /project/yolo_segmentation_chess/show_Contours_hu2267777ffc8d9030c9b958b0de05d937_90603_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/yolo_segmentation_chess/show_Contours_hu2267777ffc8d9030c9b958b0de05d937_90603_99265c52cfbccc37ab77ca363b3f3e51.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>SIIM ISIC Melanoma Classification</title>
       <link>https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/</link>
-      <pubDate>Sat, 06 Aug 2022 17:27:58 +0530</pubDate>
+      <pubDate>Sat, 29 Aug 2020 17:27:58 +0530</pubDate>
       <guid>https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/</guid>
       <description>&lt;h2 id=&#34;-siim-isic-melanoma-classification&#34;&gt;🔬 SIIM-ISIC-Melanoma-Classification&lt;/h2&gt;
 &lt;p&gt;
@@ -194,6 +557,325 @@
 &lt;li&gt;Skin cancer history: People who have already had melanoma or nonmelanoma skin cancers run a greater risk of developing melanoma in the future.&lt;/li&gt;
 &lt;li&gt;Genetics: Melanoma can run in families – one in every 10 patients has a family member who also has had the disease.&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Social Distance Surveillance</title>
+      <link>https://vatsalparsaniya.github.io/project/social_distance_surveillance/</link>
+      <pubDate>Thu, 02 Jul 2020 00:45:38 +0530</pubDate>
+      <guid>https://vatsalparsaniya.github.io/project/social_distance_surveillance/</guid>
+      <description>&lt;h2 id=&#34;looking-for-social-distance-monitoring-by-cctv-integrated-with-ai&#34;&gt;Looking for Social Distance Monitoring by CCTV integrated with AI?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maintaining social distancing is a very crucial issue in a COVID-19 outbreak scenario.This is an effective way to control the spread of the virus. However it is very difficult to maintain and monitor the social distancing norms in many cases such as in public places, offices and workplaces , where working in a close proximity is a requirement&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;COVID-19 has impacted society in a drastic way. Due to this invisible enemy, it is required to keep a social distance between humans. But as human beings are social animals, it has been really difficult to maintain the required social distance in different areas. And due to this factor, logarithmic increase in the number of cases has been really huge.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;img src=&#34;result_image_1.png&#34; width=&#34;800&#34; title=&#34;check out my youtube video&#34;&gt;
+&lt;h4 id=&#34;result-videos&#34;&gt;Result Videos&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Youtube Video 1&lt;/th&gt;
+&lt;th&gt;Youtube Video 2&lt;/th&gt;
+&lt;th&gt;Youtube Video 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=C10GOaOQHuM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/C10GOaOQHuM/0.jpg&#34; width=&#34;500&#34; title=&#34;check out my youtube video&#34;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qouqqGm7gEc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/qouqqGm7gEc/0.jpg&#34; width=&#34;500&#34; title=&#34;check out my youtube video&#34;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=B8rJQ-cuoOc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/B8rJQ-cuoOc/0.jpg&#34; width=&#34;500&#34; title=&#34;check out my youtube video&#34;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;step-by-step-solution&#34;&gt;Step-by-Step Solution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Vatsalparsaniya/Social-Distance-Surveillance/blob/master/Social_distance.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter Notebook&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;model-selection&#34;&gt;Model selection:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;People detection (Model to detect humans ex: Yolo(You only look once))&lt;/li&gt;
+&lt;li&gt;Load and start the model&lt;/li&gt;
+&lt;li&gt;Pass a video frame through the model to detect objects&lt;/li&gt;
+&lt;li&gt;Filter out weak predictions and non-relevant objects (other than humans)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;birds-eye-view-transformation&#34;&gt;Birds-eye view transformation&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the coordinates of the points located at the bottom centre of the detected person box&lt;/li&gt;
+&lt;li&gt;Perspective transform on selected point for top view with the help of a computer vision library&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;social-distancing-measurement&#34;&gt;Social distancing measurement&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;With the help of transformed points calculate euclidean distance and map with image pixels to the real distance between 2 people.&lt;/li&gt;
+&lt;li&gt;If they are not maintaining social distancing then mark their respective boxes using Red colour&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;results-and-improvements&#34;&gt;Results and Improvements&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Using a faster model in order to perform real-time social distancing analysis.&lt;/li&gt;
+&lt;li&gt;Automatic calibration problems could improve a lot the birds-eye view transformation on different scenes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;birds-eye-view-transformation-1&#34;&gt;Birds eye View Transformation&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;original Image&lt;/th&gt;
+&lt;th&gt;Transformed Image&lt;/th&gt;
+&lt;th&gt;Birds eye View&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;set_prespective_points_200_1&#34; srcset=&#34;
+               /project/social_distance_surveillance/set_prespective_points_200_1_hu32d12e0476404e86889fc0b478bfe37f_2690910_aa872e2ec45f9f8a93a8467fcc1b42df.webp 400w,
+               /project/social_distance_surveillance/set_prespective_points_200_1_hu32d12e0476404e86889fc0b478bfe37f_2690910_f1a6f6c7afaf9822ad34cdf849f5cd77.webp 760w,
+               /project/social_distance_surveillance/set_prespective_points_200_1_hu32d12e0476404e86889fc0b478bfe37f_2690910_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/set_prespective_points_200_1_hu32d12e0476404e86889fc0b478bfe37f_2690910_aa872e2ec45f9f8a93a8467fcc1b42df.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;transform_top_view_200_2.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/transform_top_view_200_2_hu7143d4a227afb11971c1a41ece03039c_1017322_c5948c9a443911070e323aebe5a5b8b8.webp 400w,
+               /project/social_distance_surveillance/transform_top_view_200_2_hu7143d4a227afb11971c1a41ece03039c_1017322_ab6bebfb4d6746311a9212ca0a12c3fc.webp 760w,
+               /project/social_distance_surveillance/transform_top_view_200_2_hu7143d4a227afb11971c1a41ece03039c_1017322_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/transform_top_view_200_2_hu7143d4a227afb11971c1a41ece03039c_1017322_c5948c9a443911070e323aebe5a5b8b8.webp&#34;
+               width=&#34;563&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;birds_eye_view_image_200_3.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/birds_eye_view_image_200_3_huf111ba307a7149c9898268775714db64_19212_b4489316a8aa98914b2c5f157e078a83.webp 400w,
+               /project/social_distance_surveillance/birds_eye_view_image_200_3_huf111ba307a7149c9898268775714db64_19212_ef1e196cf19cd2836213c91dbb65c5f3.webp 760w,
+               /project/social_distance_surveillance/birds_eye_view_image_200_3_huf111ba307a7149c9898268775714db64_19212_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/birds_eye_view_image_200_3_huf111ba307a7149c9898268775714db64_19212_b4489316a8aa98914b2c5f157e078a83.webp&#34;
+               width=&#34;676&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;pedestrianWalking_set_prespective_points_400_4.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/pedestrianWalking_set_prespective_points_400_4_hu2d259a695df620e10a5e1f6a67ffd47e_684382_f94167337f1c662a1eca7f8f4833a9f2.webp 400w,
+               /project/social_distance_surveillance/pedestrianWalking_set_prespective_points_400_4_hu2d259a695df620e10a5e1f6a67ffd47e_684382_1c27455ec4ebcd4fbd1774c517d0a0aa.webp 760w,
+               /project/social_distance_surveillance/pedestrianWalking_set_prespective_points_400_4_hu2d259a695df620e10a5e1f6a67ffd47e_684382_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/pedestrianWalking_set_prespective_points_400_4_hu2d259a695df620e10a5e1f6a67ffd47e_684382_f94167337f1c662a1eca7f8f4833a9f2.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;pedestrianWalking_transform_top_view_400_5.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/pedestrianWalking_transform_top_view_400_5_hu480fde7ec038854b73dfa222fa43bca1_963315_11bf6f7e26ceec55e75060ff6af86ec4.webp 400w,
+               /project/social_distance_surveillance/pedestrianWalking_transform_top_view_400_5_hu480fde7ec038854b73dfa222fa43bca1_963315_3aab67bf997fa02ee4f087ac856bb922.webp 760w,
+               /project/social_distance_surveillance/pedestrianWalking_transform_top_view_400_5_hu480fde7ec038854b73dfa222fa43bca1_963315_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/pedestrianWalking_transform_top_view_400_5_hu480fde7ec038854b73dfa222fa43bca1_963315_11bf6f7e26ceec55e75060ff6af86ec4.webp&#34;
+               width=&#34;563&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;pedestrianWalking_birds_eye_view_image_400_6.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/pedestrianWalking_birds_eye_view_image_400_6_hu247a974ed1169a39937dac0deb8da296_6051_a8b3b07d4ebb7333a34deabaab5e985b.webp 400w,
+               /project/social_distance_surveillance/pedestrianWalking_birds_eye_view_image_400_6_hu247a974ed1169a39937dac0deb8da296_6051_3f14a14a776921220454481dde4a067c.webp 760w,
+               /project/social_distance_surveillance/pedestrianWalking_birds_eye_view_image_400_6_hu247a974ed1169a39937dac0deb8da296_6051_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/pedestrianWalking_birds_eye_view_image_400_6_hu247a974ed1169a39937dac0deb8da296_6051_a8b3b07d4ebb7333a34deabaab5e985b.webp&#34;
+               width=&#34;384&#34;
+               height=&#34;576&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;output-dashboard&#34;&gt;Output dashboard&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Input Image&lt;/th&gt;
+&lt;th&gt;Output Image&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;TownCentre_frame_200.jpeg&#34; width=&#34;350&#34; title=&#34;TownCentre_frame_200.jpeg&#34;&gt;&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;final_output_200.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/final_output_200_hue0103fa532912b782687b20a359e8905_3029431_caa8e3f686c473b6559fe65fbf1ffcc4.webp 400w,
+               /project/social_distance_surveillance/final_output_200_hue0103fa532912b782687b20a359e8905_3029431_6c620c8b03a49ed81e6083da61681a07.webp 760w,
+               /project/social_distance_surveillance/final_output_200_hue0103fa532912b782687b20a359e8905_3029431_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/final_output_200_hue0103fa532912b782687b20a359e8905_3029431_caa8e3f686c473b6559fe65fbf1ffcc4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;306&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;pedestrianWalking_frame_400.jpeg&#34; width=&#34;350&#34; title=&#34;pedestrianWalking_frame_400.jpeg&#34;&gt;&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;final_output_pedestrianWalking_400.png&#34; srcset=&#34;
+               /project/social_distance_surveillance/final_output_pedestrianWalking_400_huc0c5b5feada2e87154af2ba7b96b6068_841398_9fcc8690038f4e4e01d639fba99ff114.webp 400w,
+               /project/social_distance_surveillance/final_output_pedestrianWalking_400_huc0c5b5feada2e87154af2ba7b96b6068_841398_3d6f2f1654422ec772fbbd21f6c5dd5f.webp 760w,
+               /project/social_distance_surveillance/final_output_pedestrianWalking_400_huc0c5b5feada2e87154af2ba7b96b6068_841398_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://vatsalparsaniya.github.io/project/social_distance_surveillance/final_output_pedestrianWalking_400_huc0c5b5feada2e87154af2ba7b96b6068_841398_9fcc8690038f4e4e01d639fba99ff114.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;433&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
