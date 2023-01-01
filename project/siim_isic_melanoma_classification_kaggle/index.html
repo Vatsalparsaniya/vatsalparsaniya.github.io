@@ -1,0 +1,1407 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Vatsal Parsaniya" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="This contains work on a Medical Image Classification Challenge hosted on Kaggle and secured 127th rank out of 3,308 teams and a silver medal 🥈 in this competition." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.56db13bd04c5490946f7c2344b5ecfd9.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@wowchemy" />
+    <meta property="twitter:creator" content="@wowchemy" />
+  
+  <meta property="og:site_name" content="Vatsal Parsaniya" />
+  <meta property="og:url" content="https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/" />
+  <meta property="og:title" content="SIIM ISIC Melanoma Classification | Vatsal Parsaniya" />
+  <meta property="og:description" content="This contains work on a Medical Image Classification Challenge hosted on Kaggle and secured 127th rank out of 3,308 teams and a silver medal 🥈 in this competition." /><meta property="og:image" content="https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/featured.jpg" />
+    <meta property="twitter:image" content="https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2020-08-29T17:27:58&#43;05:30"
+      />
+    
+    <meta property="article:modified_time" content="2020-08-29T17:27:58&#43;05:30">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/"
+  },
+  "headline": "SIIM ISIC Melanoma Classification",
+  
+  "image": [
+    "https://vatsalparsaniya.github.io/project/siim_isic_melanoma_classification_kaggle/featured.jpg"
+  ],
+  
+  "datePublished": "2020-08-29T17:27:58+05:30",
+  "dateModified": "2020-08-29T17:27:58+05:30",
+  
+  "author": {
+    "@type": "Person",
+    "name": "vatsal parsaniya"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vatsal Parsaniya",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vatsalparsaniya.github.io/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "This contains work on a Medical Image Classification Challenge hosted on Kaggle and secured 127th rank out of 3,308 teams and a silver medal 🥈 in this competition."
+}
+</script>
+
+  
+
+  
+
+  
+
+
+  <title>SIIM ISIC Melanoma Classification | Vatsal Parsaniya</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="23ae07a25808b9f591aac3acf27c17d5" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Vatsal Parsaniya</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Vatsal Parsaniya</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#accomplishments"><span>Accomplishments</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>SIIM ISIC Melanoma Classification</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      vatsal parsaniya</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Aug. 29, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/deep-learning/">Deep Learning</a>, <a href="/category/kaggle/">Kaggle</a>, <a href="/category/computer-vision/">Computer Vision</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://github.com/Vatsalparsaniya/SIIM-ISIC-Melanoma-Classification" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>Repository</a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://www.kaggle.com/competitions/siim-isic-melanoma-classification/" target="_blank" rel="noopener">
+    <i class="fab fa-kaggle mr-1"></i>Kaggle</a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://siim-melanoma-classification.herokuapp.com/" target="_blank" rel="noopener">
+    Live Deployed Model</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 628px;">
+  <div style="position: relative">
+    <img src="/project/siim_isic_melanoma_classification_kaggle/featured_hu8ff7df1dffbed1b655ca01fcb185a527_94836_720x2500_fit_q75_h2_lanczos.webp" width="720" height="628" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="-siim-isic-melanoma-classification">🔬 SIIM-ISIC-Melanoma-Classification</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Banner" srcset="
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_996cb5cf97fd380d5ef82cd1d6ddfa7d.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_0cffd5f38bb6cf456c9e38fa592db5ea.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/siim_isic_melanoma_classification_kaggle/banner_hua7cf6b08cfb192c530b800b6b98ce813_68103_996cb5cf97fd380d5ef82cd1d6ddfa7d.webp"
+               width="760"
+               height="160"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="-description">📝 Description</h3>
+<p>Skin cancer is the most prevalent type of cancer. Melanoma, specifically, is responsible for 75% of skin cancer deaths, despite being the least common skin cancer. The American Cancer Society estimates over 100,000 new melanoma cases will be diagnosed in 2020. It&rsquo;s also expected that almost 7,000 people will die from the disease. As with other cancers, early and accurate detection—potentially aided by data science—can make treatment more effective.</p>
+<p>Currently, dermatologists evaluate every one of a patient&rsquo;s moles to identify outlier lesions or “ugly ducklings” that are most likely to be melanoma. Existing AI approaches have not adequately considered this clinical frame of reference. Dermatologists could enhance their diagnostic accuracy if detection algorithms take into account “contextual” images within the same patient to determine which images represent a melanoma. If successful, classifiers would be more accurate and could better support dermatological clinic work.</p>
+<p>As the leading healthcare organization for informatics in medical imaging, the Society for <a href="https://siim.org/" target="_blank" rel="noopener">Imaging Informatics in Medicine (SIIM)</a>&rsquo;s mission is to advance medical imaging informatics through education, research, and innovation in a multi-disciplinary community. SIIM is joined by the <a href="https://www.isic-archive.com/" target="_blank" rel="noopener">International Skin Imaging Collaboration (ISIC)</a>, an international effort to improve melanoma diagnosis. The ISIC Archive contains the largest publicly available collection of quality-controlled dermoscopic images of skin lesions.</p>
+<p>In this competition, you’ll identify melanoma in images of skin lesions. In particular, you’ll use images within the same patient and determine which are likely to represent a melanoma. Using patient-level contextual information may help the development of image analysis tools, which could better support clinical dermatologists.</p>
+<p>Melanoma is a deadly disease, but if caught early, most melanomas can be cured with minor surgery. Image analysis tools that automate the diagnosis of melanoma will improve dermatologists&rsquo; diagnostic accuracy. Better detection of melanoma has the opportunity to positively impact millions of people.</p>
+<h3 id="-evaluation">🔍 Evaluation</h3>
+<p>Submissions are evaluated on <a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic" target="_blank" rel="noopener">area under the ROC curve</a> between the predicted probability and the observed target.</p>
+<p><strong>What is AUC - ROC Curve?</strong></p>
+<p>AUC - ROC curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. It tells how much model is capable of distinguishing between classes. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.</p>
+<p>The ROC curve is plotted with TPR against the FPR where TPR is on y-axis and FPR is on the x-axis.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="ROC-AUC" srcset="
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_62aee84f1627585252560e6e74077c55.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_28e23efdf6d13af6e1217f8d6761c6e7.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/project/siim_isic_melanoma_classification_kaggle/ROC-AUC_hu500b8bec8f8ff661af24ab6383c34c21_3231_62aee84f1627585252560e6e74077c55.webp"
+               width="361"
+               height="330"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>▶ Here is the <a href="https://youtu.be/4jRBRDbJemM" target="_blank" rel="noopener">link to a great video</a> on roc-auc</p>
+<h2 id="-more-about-melanoma">📝 More About Melanoma</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="About Melanoma"
+           src="/project/siim_isic_melanoma_classification_kaggle/About_Melanoma.gif"
+           loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<ul>
+<li>The most serious type of skin cancer.</li>
+<li>Melanoma occurs when the pigment-producing cells that give colour to the skin become cancerous.</li>
+<li>Symptoms might include a new, unusual growth or a change in an existing mole. Melanomas can occur anywhere on the body.</li>
+<li>Treatment may involve surgery, radiation, medication or in some cases, chemotherapy.</li>
+</ul>
+<h2 id="melanoma-hair-remove">Melanoma Hair Remove</h2>
+<ul>
+<li>
+<p><a href="https://www.kaggle.com/code/vatsalparsaniya/melanoma-hair-remove/notebook" target="_blank" rel="noopener"><strong>Kaggle Notebook (120+ ⭐)</strong></a></p>
+</li>
+<li>
+<p>There are many images with body hair covering the lesion so, hair remove operation can be useful for model focus on lesion part.</p>
+</li>
+<li>
+<p>Method for hair remove using CV2</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hair_remove</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># convert image to grayScale</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grayScale</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2GRAY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># kernel for morphologyEx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">kernel</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getStructuringElement</span><span class="p">(</span><span class="mi">1</span><span class="p">,(</span><span class="mi">17</span><span class="p">,</span><span class="mi">17</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># apply MORPH_BLACKHAT to grayScale image</span>
+</span></span><span class="line"><span class="cl">    <span class="n">blackhat</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">grayScale</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_BLACKHAT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># apply thresholding to blackhat</span>
+</span></span><span class="line"><span class="cl">    <span class="n">_</span><span class="p">,</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">blackhat</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_BINARY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># inpaint with original image and threshold image</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">inpaint</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="n">threshold</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">INPAINT_TELEA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">final_image</span>
+</span></span></code></pre></div><h5 id="results-of-above-mention-method">results of above mention method</h5>
+<img src="remove_hair_1.png" width="400" title="Hair Remove Image - 1">
+<img src="remove_hair_2.png" width="400" title="Hair Remove Image - 2">
+<img src="remove_hair_3.png" width="400" title="Hair Remove Image - 3">
+<h5 id="visualizing-step-wise-cv2-operations">Visualizing step-wise CV2 Operations</h5>
+<img src="cv2_operation.png" title="Step Wise CV2 operations">
+<h3 id="-abcde-rule">✔ ABCDE Rule</h3>
+<p>Use the “ABCDE rule” to look for some of the common signs of melanoma, one of the deadliest forms of skin cancer:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="ABCDE Rule" srcset="
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_2efcc48ce1cfb0d32948cb0e29bb6830.webp 400w,
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_59eab9428ca377bc24d44ceedf4de576.webp 760w,
+               /project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/siim_isic_melanoma_classification_kaggle/abcde_hua9b00e8bb2c47023b48e3ed2f8deecb4_92444_2efcc48ce1cfb0d32948cb0e29bb6830.webp"
+               width="512"
+               height="511"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="-ugly-duckling">✔ Ugly Duckling</h3>
+<p>The <strong>Ugly Duckling</strong> is another warning sign of melanoma. This recognition strategy is based on the concept that most normal moles on your body resemble one another, while melanomas stand out like ugly ducklings in comparison. This highlights the importance of not just checking for irregularities, but also comparing any suspicious spot to surrounding moles to determine whether it looks different from its neighbours. These ugly duckling lesions or outlier lesions can be larger, smaller, lighter or darker, compared to surrounding moles. Also, isolated lesions without any surrounding moles for comparison are considered ugly ducklings.</p>
+<p>Melanomas commonly appear on the legs of women, and the number one place they develop on men is the trunk.</p>
+<p>Many other factors also play a role in increasing the risk for melanoma, including genetics (family history), skin type or colour, hair colour, freckling and number of moles on the body.</p>
+<h3 id="-these-factors-increase-your-melanoma-risk">✔ These factors increase your melanoma risk</h3>
+<ul>
+<li>Unprotected or excessive UV exposure from the sun or indoor tanning.</li>
+<li>Weakened immune system due to a medical condition or medications.</li>
+<li>Many moles: The more moles you have on your body, the higher your risk for melanoma. Also, having large moles (larger than a tip of a pencil eraser), or any atypical moles, increases the risk for melanoma.</li>
+<li>Fair skin: Melanoma occurs more frequently in people with fair skin, light eyes and light or red hair.</li>
+<li>Skin cancer history: People who have already had melanoma or nonmelanoma skin cancers run a greater risk of developing melanoma in the future.</li>
+<li>Genetics: Melanoma can run in families – one in every 10 patients has a family member who also has had the disease.</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tag/kaggle/">Kaggle</a>
+  
+  <a class="badge badge-light" href="/tag/computer-vision/">Computer Vision</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/VatsalParsaniya" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:vatsalparsaniya@gmail.com" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/in/vatsal-parsaniya/" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://github.com/Vatsalparsaniya" target="_blank" rel="noopener" class="share-btn-github" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://stackoverflow.com/users/9735841/vatsal-parsaniya" target="_blank" rel="noopener" class="share-btn-stack-overflow" aria-label="stack-overflow">
+          <i class="fab fa-stack-overflow"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.instagram.com/vatsal_parsaniya/" target="_blank" rel="noopener" class="share-btn-instagram" aria-label="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2023 Vatsal Parsaniya — @VatsalParsaniya
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.992ab4bf929c75fb2aff9ec73febac85.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
