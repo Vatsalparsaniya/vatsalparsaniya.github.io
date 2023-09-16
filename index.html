@@ -1084,20 +1084,12 @@
           </div>
           
 
-          <div class="card-text"><ul>
-<li>Currently working on optimizing 𝐦𝐮𝐥𝐭𝐢𝐥𝐢𝐧𝐠𝐮𝐚𝐥 𝐡𝐲𝐛𝐫𝐢𝐝 𝐬𝐞𝐚𝐫𝐜𝐡 outcomes (lexical + semantic) through the implementation of microservices across a wide range of customer products and internal tools. This optimization includes comprehensive support for 11 Indic languages.</li>
-<li>Involved in 𝐑𝐞𝐭𝐫𝐢𝐞𝐯𝐚𝐥 𝐀𝐮𝐠𝐦𝐞𝐧𝐭𝐞𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐨𝐧 (𝐑𝐀𝐆) for search applications. This entails retrieving academic entities using ontologies and dynamically selecting prompts to generate contextually relevant responses from a generative model.</li>
-<li>Designed and implemented a scalable image(OCR) and text 𝐞𝐧𝐭𝐢𝐭𝐲 𝐞𝐱𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧 𝐚𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦 along with a microservice. This system efficiently identifies academic entities by leveraging multiple ontology datasets, synonyms, spellchecking, and the solr analyzer for enhanced accuracy.</li>
-<li>Developed an intent and entity-based 𝐫𝐚𝐧𝐤𝐢𝐧𝐠 𝐦𝐨𝐝𝐮𝐥𝐞 that optimizes the trade-off between latency and business logic demands, leading to an impressive 𝟖% 𝐛𝐨𝐨𝐬𝐭 𝐢𝐧 𝐂𝐥𝐢𝐜𝐤-𝐓𝐡𝐫𝐨𝐮𝐠𝐡 𝐑𝐚𝐭𝐞 (𝐂𝐓𝐑).</li>
-<li>𝐇𝐲𝐛𝐫𝐢𝐝 𝐬𝐞𝐚𝐫𝐜𝐡 (𝐥𝐞𝐱𝐢𝐜𝐚𝐥 + 𝐬𝐞𝐦𝐚𝐧𝐭𝐢𝐜):
+          <div class="card-text"><p>I closely collaborate with the product team within the Discovery Search Science group to transform intricate business challenges into data science problem statements. My role revolves around enhancing the search experience for users by optimizing multilingual search outcomes across a wide range of customer products and internal tools and also engage in both offline and online assessments with the engineering team to ensure the feasibility of our solutions, utilizing methodologies like NLP and Rule-Based systems.</p>
 <ul>
-<li>Conducted benchmark evaluations on various 𝐯𝐞𝐜𝐭𝐨𝐫 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞𝐬, including Milvus, Qdrant, Elasticsearch, and Solr, with a primary focus on retrieval latency and vector index types.</li>
-<li>Integrated a fine-tuned MiniLM model into the 𝐢𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐬𝐞𝐫𝐯𝐞𝐫 and incorporated a vector database into the hybrid search pipeline, enabling semantic search capabilities.</li>
-<li>Established a search 𝐟𝐞𝐞𝐝𝐛𝐚𝐜𝐤 𝐩𝐢𝐩𝐞𝐥𝐢𝐧𝐞 using the Gradio Interface for SME validation and the evaluation of various search algorithms.</li>
-<li>Developed search capabilities in 11 Indic languages, including 𝐪𝐮𝐞𝐫𝐲 𝐮𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝𝐢𝐧𝐠 (𝐐𝐔) 𝐚𝐧𝐝 𝐪𝐮𝐞𝐫𝐲 𝐞𝐱𝐩𝐚𝐧𝐬𝐢𝐨𝐧 (𝐐𝐄) modules, enabling users to seamlessly search in any language.</li>
-</ul>
-</li>
-<li>Setup search 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐝𝐚𝐬𝐡𝐛𝐨𝐚𝐫𝐝 by consuming user event logs to monitor and measure search performance metrics.</li>
+<li><strong>Retrieval Augmented Generation (RAG)</strong>: Involved in development of Retrieval Augmented Generation for search and chatbot applications. This entails retrieving academic content with ontologies information and dynamically selecting prompts to generate contextually relevant responses from a generative model.</li>
+<li><strong>Multilingual Hybrid Search</strong>: Developed search capabilities in 11 Indic languages, including query understanding (QU) and query expansion (QE) modules, enabling users to seamlessly search in any language. Conducted benchmark evaluations on various vector databases, including Milvus, Qdrant, Elasticsearch, and Solr, with a primary focus on retrieval latency and vector index types. Integrated a fine-tuned embedding model into the inference server and incorporated a vector database into the hybrid search pipeline, enabling semantic search capabilities. Established a search feedback pipeline using the Gradio Interface for SME validation and the evaluation of various search algorithms. Setup search utilization dashboard by consuming user event logs to monitor and measure search performance metrics. Achieved a substantial 8% increase in Click-Through Rate (CTR) by optimizing the intent and entity based ranking algorithm, contributing significantly to the system&rsquo;s overall performance.</li>
+<li><strong>Entity Extraction</strong>: Designed and implemented a scalable text entity extraction algorithm integrated into a microservice. This system identifies academic entities through the utilization of multiple ontology datasets, synonym dictionaries, and a spellcheck mechanism, all seamlessly integrated with the Solr analyzer to achieve heightened accuracy.</li>
+<li><strong>Spell Check</strong>: spell corrector is fundamental component of our NLU pipeline and search engine. Worked on building a corpus for spellchecking using user search query data. I implemented a hybrid spellcheck algorithm that combines popularity-based and context-based approaches. This algorithm successfully improved the accuracy of our system, resulting in the correction of approximately 37% of total user search terms with an impressive accuracy of around 79%.</li>
 </ul>
 </div>
         </div>
