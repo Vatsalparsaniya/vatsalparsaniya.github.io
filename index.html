@@ -1084,12 +1084,25 @@
           </div>
           
 
-          <div class="card-text"><p>I closely collaborate with the product team within the Discovery Search Science group to transform intricate business challenges into data science problem statements. My role revolves around enhancing the search experience for users by optimizing multilingual search outcomes across a wide range of customer products and internal tools and also engage in both offline and online assessments with the engineering team to ensure the feasibility of our solutions, utilizing methodologies like NLP and Rule-Based systems.</p>
+          <div class="card-text"><ul>
+<li>I closely collaborate with the product team within the Discovery Search Science group to transform intricate business challenges into data science problem statements. My role revolves around enhancing the search experience for users by optimizing multilingual search outcomes across a wide range of customer products and internal tools and also engage in both offline and online assessments with the engineering team to ensure the feasibility of our solutions, utilizing methodologies like NLP and Rule-Based systems.</li>
+<li><strong>Multilingual Semantic Search</strong>: Developed Semantic Similar entity based Search
 <ul>
-<li><strong>Retrieval Augmented Generation (RAG)</strong>: Involved in development of Retrieval Augmented Generation for search and chatbot applications. This entails retrieving academic content with ontologies information and dynamically selecting prompts to generate contextually relevant responses from a generative model.</li>
-<li><strong>Multilingual Hybrid Search</strong>: Developed search capabilities in 11 Indic languages, including query understanding (QU) and query expansion (QE) modules, enabling users to seamlessly search in any language. Conducted benchmark evaluations on various vector databases, including Milvus, Qdrant, Elasticsearch, and Solr, with a primary focus on retrieval latency and vector index types. Integrated a fine-tuned embedding model into the inference server and incorporated a vector database into the hybrid search pipeline, enabling semantic search capabilities. Established a search feedback pipeline using the Gradio Interface for SME validation and the evaluation of various search algorithms. Setup search utilization dashboard by consuming user event logs to monitor and measure search performance metrics. Achieved a substantial 8% increase in Click-Through Rate (CTR) by optimizing the intent and entity based ranking algorithm, contributing significantly to the system&rsquo;s overall performance.</li>
-<li><strong>Entity Extraction</strong>: Designed and implemented a scalable text entity extraction algorithm integrated into a microservice. This system identifies academic entities through the utilization of multiple ontology datasets, synonym dictionaries, and a spellcheck mechanism, all seamlessly integrated with the Solr analyzer to achieve heightened accuracy.</li>
-<li><strong>Spell Check</strong>: spell corrector is fundamental component of our NLU pipeline and search engine. Worked on building a corpus for spellchecking using user search query data. I implemented a hybrid spellcheck algorithm that combines popularity-based and context-based approaches. This algorithm successfully improved the accuracy of our system, resulting in the correction of approximately 37% of total user search terms with an impressive accuracy of around 79%.</li>
+<li>Finetuned MiniLM (SBERT Sentence Transformer Model) for semantic similarity for our academic/Indian domain entities, which helped us improve search retrieval and relevancy for user queries by 8%.</li>
+<li>Implemented results re-ranking utilizing the LambdaMART algorithm, which is a gradient boosting-based ranking algorithm. This significantly improved results ranking on our golden dataset compared to using embedding similarity for ranking.</li>
+<li>Integrated embedding model into the NVIDIA Triton Inference Server and incorporated a vector database into the hybrid search pipeline.</li>
+<li>Developed search capabilities in 11 Indic languages, and used the LABSE (Language Agnostic BERT) Model for semantic similarity.</li>
+<li>Established a search feedback pipeline using the Gradio Interface for SME validation and for the evaluation of various search algorithms on golden dataset.</li>
+<li>Worked on query understanding (QU) and query expansion (QE) modules, enabling users to search in mixed languages (English+Indic).</li>
+</ul>
+</li>
+<li><strong>Entity Extraction (NER):</strong> For Search – Developed Solr based entity detection to facilitate search
+<ul>
+<li>Implemented end-to-end Solr-based Entity Detection Service, using Solr’s tagger request handler.</li>
+<li>Used various natural language analyzers and filters like stemmer, stopwords, synonyms, lemmatizer, and possessive in our analyzer chain of Solr’s tagger request handler.</li>
+<li>The algorithm serves as a core service in various client products, tasked with highlighting academic entities and retrieving associated academic content.</li>
+</ul>
+</li>
 </ul>
 </div>
         </div>
