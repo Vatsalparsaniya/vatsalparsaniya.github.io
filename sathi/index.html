@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>For You 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    body {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a0011, #2d0a1e, #1a0a2e);
+      font-family: 'Quicksand', sans-serif;
+      color: #fce4ec;
+      text-align: center;
+      padding: clamp(1rem, 5vw, 3rem);
+    }
+    .container {
+      animation: fadeIn 1.5s ease;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2.2rem, 7vw, 3.5rem);
+      background: linear-gradient(135deg, #f8bbd0, #f48fb1, #ec407a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+    }
+    p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      opacity: 0.7;
+      line-height: 1.6;
+    }
+    .heart-float {
+      font-size: clamp(2rem, 6vw, 3rem);
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+      margin-top: clamp(1rem, 3vw, 1.5rem);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>This Space Is Yours, Sathi</h1>
+    <p>Some things are better as surprises... 💌</p>
+    <div class="heart-float">💗</div>
+  </div>
+</body>
+</html>

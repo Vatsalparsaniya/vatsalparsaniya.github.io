@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Go On A Date With Me? 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <div class="container" id="main-content">
+    <!-- Her image placeholder -->
+    <div class="image-wrapper">
+      <div class="image-placeholder" id="her-image">
+        <img src="her-photo.jpg" alt="Sathi" onerror="this.style.display='none'; document.getElementById('placeholder-text').style.display='flex';" />
+        <div class="placeholder-text" id="placeholder-text">
+          <span>📷</span>
+          <small>Place her photo as<br><code>date-ask/her-photo.jpg</code></small>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="title">Hey Sathi ✨</h1>
+
+    <div class="letter">
+      <p class="line line-1">You know what makes my ordinary days extraordinary?</p>
+      <p class="line line-2">It's you. Just you. Always you.</p>
+      <p class="line line-3">So here I am, gathering all my courage to ask...</p>
+    </div>
+
+    <h2 class="question">Will you go on a date with me? 🌹</h2>
+    <p class="signed">— Your Vatsal 💌</p>
+
+    <div class="buttons">
+      <button class="btn btn-yes" id="btn-yes">Yes! 💖</button>
+      <button class="btn btn-no" id="btn-no">No 😢</button>
+    </div>
+  </div>
+
+  <!-- Yes response -->
+  <div class="response-screen hidden" id="yes-screen">
+    <div class="celebration" id="celebration"></div>
+    <div class="response-content">
+      <h1>You just made me the happiest! 🥹💕</h1>
+      <p>I promise to make it the most beautiful evening.</p>
+      <p class="small-text">Can't stop smiling now... 😊</p>
+      <div class="countdown-hint">See you soon, Sathi 💗<br><span class="signed-small">— Vatsal</span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
