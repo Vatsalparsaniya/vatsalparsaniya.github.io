@@ -1,0 +1,340 @@
+# ============================================================
+# SITE CONFIGURATION — Edit this file to customize everything
+# ============================================================
+
+# --- Site Meta ---
+site:
+  title: "Vatsal Parsaniya"
+  description: "Senior Data Scientist — Search, NLP, LLMs & Multilingual AI"
+  url: "https://vatsalparsaniya.com"
+  favicon: "/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_32x32_fill_lanczos_center_3.png"
+  appleTouchIcon: "/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_180x180_fill_lanczos_center_3.png"
+  ogImage: "/media/icon_hu41efe379c510cbcb4aedbab62762f822_9038_512x512_fill_lanczos_center_3.png"
+  locale: "en-us"
+  copyright: "© 2026 Vatsal Parsaniya"
+
+# --- Theme ---
+theme:
+  defaultMode: "light"  # "dark" or "light"
+  accentColor: "#6C63FF"  # Primary accent (purple-blue)
+  accentGradient: "linear-gradient(135deg, #6C63FF 0%, #3B82F6 50%, #06B6D4 100%)"
+  fontHeading: "'Inter', sans-serif"
+  fontBody: "'Inter', sans-serif"
+  fontMono: "'JetBrains Mono', monospace"
+
+# --- Navigation ---
+nav:
+  logo: "VP"
+  links:
+    - label: "About"
+      href: "#about"
+    - label: "Experience"
+      href: "#experience"
+    - label: "Skills"
+      href: "#skills"
+    - label: "Projects"
+      href: "#projects"
+    - label: "Achievements"
+      href: "#accomplishments"
+    - label: "Contact"
+      href: "#contact"
+
+# --- Hero Section ---
+hero:
+  enabled: true
+  greeting: "Hi, I'm"
+  name: "Vatsal Parsaniya"
+  titles:
+    - "Senior Data Scientist"
+    - "Search & NLP Engineer"
+    - "LLM & RAG Specialist"
+    - "Kaggle 3X Expert"
+  tagline: "Building intelligent search systems, multilingual AI, and LLM-powered solutions at scale."
+  avatar: "/authors/admin/avatar.jpg"
+  cta:
+    - label: "View Projects"
+      href: "#projects"
+      primary: true
+    - label: "Get in Touch"
+      href: "#contact"
+      primary: false
+  socials:
+    - icon: "fab fa-github"
+      url: "https://github.com/Vatsalparsaniya"
+      label: "GitHub"
+    - icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/vatsal-parsaniya/"
+      label: "LinkedIn"
+    - icon: "fab fa-kaggle"
+      url: "https://www.kaggle.com/vatsalparsaniya"
+      label: "Kaggle"
+    - icon: "fab fa-stack-overflow"
+      url: "https://stackoverflow.com/users/9735841/vatsal-parsaniya"
+      label: "Stack Overflow"
+    - icon: "fab fa-twitter"
+      url: "https://twitter.com/VatsalParsaniya"
+      label: "Twitter"
+
+# --- About Section ---
+about:
+  enabled: true
+  title: "About Me"
+  bio: |
+    A technology enthusiast working to solve real-world problems, who enjoys connecting the dots — be it ideas from different disciplines, people from different teams, or applications from different industries.
+
+    Kaggle 3X Expert with a keen focus on building accurate, value-generating models that are scalable. Passionate about search-based systems — I love to extract knowledge & insights from huge and complex data sets.
+
+    In my undergraduate studies, I took on various leadership roles, including the development of a chess-playing robotic arm, coordinating institute-wide technical events, and leading the robotics club.
+  interests:
+    - "Search & Information Retrieval"
+    - "Multilingual NLP"
+    - "Large Language Models"
+    - "Retrieval Augmented Generation"
+    - "Machine Learning at Scale"
+  education:
+    - degree: "B.Tech in ICT"
+      institution: "Pandit Deendayal Energy University (PDEU)"
+      year: "2021"
+
+# --- Experience Section ---
+experience:
+  enabled: true
+  title: "Experience"
+  positions:
+    - role: "Data Scientist"
+      company: "Embibe"
+      companyUrl: ""
+      logo: "/media/icons/brands/embibe.svg"
+      location: "Bengaluru"
+      startDate: "Sep 2021"
+      endDate: "Present"
+      highlights:
+        - title: "Retrieval Augmented Generation (RAG)"
+          description: "Developed RAG pipelines for search and chatbot applications — retrieving academic content with ontology information and dynamically selecting prompts for contextually relevant LLM responses."
+        - title: "Multilingual Semantic Search"
+          description: "Fine-tuned MiniLM (SBERT) for semantic similarity in academic/Indian domains, improving search retrieval by 8%. Implemented LambdaMART re-ranking, NVIDIA Triton Inference Server integration, and vector database hybrid search. Built search in 11 Indic languages using LABSE."
+        - title: "Entity Extraction (NER)"
+          description: "Built end-to-end Solr-based Entity Detection Service using tagger request handler with NLP analyzers (stemmer, stopwords, synonyms, lemmatizer). Core service for highlighting academic entities across client products."
+        - title: "Query Understanding"
+          description: "Developed query understanding and expansion modules enabling mixed-language search (English + Indic). Built search feedback pipeline using Gradio for SME validation."
+
+    - role: "Machine Learning Engineer"
+      company: "Intellica.ai"
+      companyUrl: "https://www.intellica.ai/"
+      logo: "/media/icons/brands/intellica.svg"
+      location: "Ahmedabad"
+      startDate: "Nov 2020"
+      endDate: "Sep 2021"
+      highlights:
+        - title: "Conversational AI"
+          description: "Built real-time telephonic conversational-AI system for interview pre-screening. Improved speech-to-text pipeline for Indian English accent using transfer learning on DeepSpeech."
+        - title: "Montreal Cognitive Assessment"
+          description: "Developed microservices for MoCA evaluation — computer vision-based drawing evaluation and NLP-based context answer evaluation system."
+
+    - role: "Advisor"
+      company: "Cretus — Robotics & Automation Club, PDEU"
+      companyUrl: "https://www.linkedin.com/company/cretus/"
+      logo: "/media/icons/brands/cretus.svg"
+      location: "Gandhinagar"
+      startDate: "Jul 2018"
+      endDate: "Jul 2021"
+      highlights:
+        - title: "Leadership"
+          description: "Held positions as committee member, event management head, and advisor. Managed robotics events with Arduino, Raspberry Pi, and various sensors. Oversaw organization budget and inventory management."
+
+# --- Skills Section ---
+skills:
+  enabled: true
+  title: "Tools & Technologies"
+  categories:
+    - name: "Languages & Frameworks"
+      items:
+        - name: "Python"
+          icon: "/media/icons/python.svg"
+        - name: "FastAPI"
+          icon: "/media/icons/fastapi.svg"
+    - name: "ML & Deep Learning"
+      items:
+        - name: "PyTorch"
+          icon: "/media/icons/pytorch.svg"
+        - name: "TensorFlow"
+          icon: "/media/icons/tensorflow.svg"
+        - name: "scikit-learn"
+          icon: "/media/icons/sklearn.svg"
+        - name: "OpenCV"
+          icon: "/media/icons/opencv.svg"
+    - name: "Data & Visualization"
+      items:
+        - name: "Pandas"
+          icon: "/media/icons/pandas.svg"
+        - name: "NumPy"
+          icon: "/media/icons/numpy.svg"
+        - name: "Matplotlib"
+          icon: "/media/icons/matplotlib.svg"
+        - name: "Seaborn"
+          icon: "/media/icons/seaborn.svg"
+        - name: "Metabase"
+          icon: "/media/icons/metabase.svg"
+    - name: "Search & Infrastructure"
+      items:
+        - name: "Elasticsearch"
+          icon: "/media/icons/elasticsearch.svg"
+        - name: "Solr"
+          icon: "/media/icons/solr.svg"
+        - name: "Docker"
+          icon: "/media/icons/docker.svg"
+        - name: "Jenkins"
+          icon: "/media/icons/jenkins.svg"
+        - name: "Airflow"
+          icon: "/media/icons/airflow.svg"
+        - name: "Git"
+          icon: "/media/icons/git.svg"
+        - name: "Raspberry Pi"
+          icon: "/media/icons/raspberry_pi.svg"
+
+# --- Projects Section ---
+projects:
+  enabled: true
+  title: "Projects"
+  filters:
+    - label: "All"
+      tag: "*"
+    - label: "Deep Learning"
+      tag: "deep-learning"
+    - label: "Computer Vision"
+      tag: "computer-vision"
+    - label: "Kaggle"
+      tag: "kaggle"
+  items:
+    - title: "Yolo Segmentation Chess"
+      description: "Chess-playing with AI (Stockfish engine) — predict best chess move in real-time using YOLO segmentation and OpenCV."
+      image: "/project/yolo_segmentation_chess/featured_hu04a1aee696603090d8af7dc0f5d7e1d3_2271731_150x0_resize_q75_h2_lanczos_3.webp"
+      tags: ["computer-vision", "deep-learning"]
+      links:
+        - label: "Yolo-Segmentation-Chess"
+          url: "https://github.com/Vatsalparsaniya/Yolo-Segmentation-Chess"
+          icon: "fab fa-github"
+        - label: "Realtime-OpenCV-Chess"
+          url: "https://github.com/Vatsalparsaniya/Realtime-OpenCV-Chess"
+          icon: "fab fa-github"
+        - label: "YouTube Playlist"
+          url: "https://www.youtube.com/playlist?list=PLdCF1vzb2HkKSVzsmV1f8EwQo8q18Xl_p"
+          icon: "fab fa-youtube"
+
+    - title: "SIIM ISIC Melanoma Classification"
+      description: "Medical Image Classification — secured 127th rank out of 3,308 teams (Top 4%) and a silver medal 🥈 on Kaggle."
+      image: "/project/siim_isic_melanoma_classification_kaggle/featured_hu8ff7df1dffbed1b655ca01fcb185a527_94836_150x0_resize_q75_h2_lanczos.webp"
+      tags: ["deep-learning", "kaggle", "computer-vision"]
+      links:
+        - label: "Repository"
+          url: "https://github.com/Vatsalparsaniya/SIIM-ISIC-Melanoma-Classification"
+          icon: "fab fa-github"
+        - label: "Kaggle"
+          url: "https://www.kaggle.com/competitions/siim-isic-melanoma-classification/"
+          icon: "fab fa-kaggle"
+        - label: "Live Demo"
+          url: "https://siim-melanoma-classification.herokuapp.com/"
+          icon: "fas fa-external-link-alt"
+
+    - title: "Social Distance Surveillance"
+      description: "Computer Vision and AI to detect if people maintain social distancing — real-time monitoring using YOLO v3."
+      image: "/project/social_distance_surveillance/featured_huc0c5b5feada2e87154af2ba7b96b6068_841398_150x0_resize_q75_h2_lanczos_3.webp"
+      tags: ["computer-vision"]
+      links:
+        - label: "Repository"
+          url: "https://github.com/Vatsalparsaniya/Social-Distance-Surveillance"
+          icon: "fab fa-github"
+        - label: "YouTube Playlist"
+          url: "https://www.youtube.com/playlist?list=PLdCF1vzb2HkK9W20TnHn8tb8MWOwwqdHH"
+          icon: "fab fa-youtube"
+
+# --- Accomplishments Section ---
+accomplishments:
+  enabled: true
+  title: "Achievements & Certifications"
+  items:
+    - title: "Generative AI with Large Language Models"
+      organization: "Coursera"
+      orgLogo: "/media/icons/brands/coursera.svg"
+      orgUrl: "https://www.coursera.org"
+      date: "Sep 2023"
+      description: "Comprehensive exploration of LLMs with transformer architectures, fine-tuning (PEFT, LoRA, soft prompts), model evaluation (BLEU, ROUGE, HELM), RLHF for toxicity, and hands-on with FLAN-T5 on AWS SageMaker."
+      certUrl: "https://coursera.org/verify/KX3UFG6Z6QHK"
+
+    - title: "Kaggle 3X Expert"
+      organization: "Kaggle"
+      orgLogo: "/media/icons/brands/kaggle.svg"
+      orgUrl: "https://www.kaggle.com/vatsalparsaniya"
+      date: "Sep 2020"
+      description: "Earned three Expert badges in Notebooks, Datasets, and Competition categories within 3 months."
+      certUrl: "https://www.kaggle.com/vatsalparsaniya"
+
+    - title: "Silver Medal — SIIM-ISIC Melanoma Classification"
+      organization: "SIIM"
+      orgLogo: "/media/icons/brands/siim.svg"
+      orgUrl: "https://iic.pdpu.ac.in/en"
+      date: "Aug 2020"
+      description: "Secured 130th rank (Top 4%) out of 3,300+ participants with 0.9409 ROC-AUC Score in medical image classification."
+      certUrl: "https://vatsalparsaniya.github.io/documents/awards/SIIM-ISIC-Melanoma-Classification.png"
+
+    - title: "Deep Learning Specialization"
+      organization: "Coursera"
+      orgLogo: "/media/icons/brands/coursera.svg"
+      orgUrl: "https://www.coursera.org"
+      date: "Apr 2020"
+      description: "5-course specialization: Neural Networks, Improving DNNs, Structuring ML Projects, CNNs, and Sequence Models."
+      certUrl: "https://coursera.org/share/c1eccbe1573658c40f4fcf70ecde6f1b"
+
+    - title: "Time Series with Python (Skill Track)"
+      organization: "DataCamp"
+      orgLogo: "/media/icons/brands/datacamp.svg"
+      orgUrl: "https://www.edx.org"
+      date: "Apr 2020"
+      description: "5-course track: Time Series Analysis, Manipulating Time Series, Visualization, ARIMA Models, and ML for Time Series."
+      certUrl: "https://www.datacamp.com/statement-of-accomplishment/track/2cd08baf1919497047d1c5036a5aa44398009752"
+
+    - title: "1st Runner-up & Best Pitch — Let's Hack 2.0"
+      organization: "PDPU-IIC"
+      orgLogo: "/media/icons/brands/iic.svg"
+      orgUrl: "https://iic.pdpu.ac.in/en"
+      date: "Nov 2019"
+      description: "Won 1st Runner-up for Digital Databases and Interface for Healthcare — centralized Firebase health database with web/app interface and data visualization."
+      certUrl: "https://vatsalparsaniya.github.io/documents/awards/1st_runnerup.jpg"
+
+    - title: "Machine Learning by Stanford University (Andrew NG)"
+      organization: "Coursera"
+      orgLogo: "/media/icons/brands/coursera.svg"
+      orgUrl: "https://www.coursera.org"
+      date: "Apr 2019"
+      description: "Logistic Regression, Artificial Neural Networks, ML Algorithms, and foundational Machine Learning concepts."
+      certUrl: "https://www.coursera.org/account/accomplishments/verify/FVRP42HEN95Z"
+
+# --- Contact Section ---
+contact:
+  enabled: true
+  title: "Get in Touch"
+  subtitle: "Have a question or want to work together?"
+  email: "vatsalparsaniya@gmail.com"
+  socials:
+    - icon: "fab fa-github"
+      url: "https://github.com/Vatsalparsaniya"
+      label: "GitHub"
+    - icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/vatsal-parsaniya/"
+      label: "LinkedIn"
+    - icon: "fab fa-kaggle"
+      url: "https://www.kaggle.com/vatsalparsaniya"
+      label: "Kaggle"
+    - icon: "fab fa-twitter"
+      url: "https://twitter.com/VatsalParsaniya"
+      label: "Twitter"
+
+# --- Footer ---
+footer:
+  enabled: true
+  text: "© 2026 Vatsal Parsaniya"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/Vatsalparsaniya"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/vatsal-parsaniya/"
