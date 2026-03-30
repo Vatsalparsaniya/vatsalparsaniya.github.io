@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>See You Soon ✈️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <!-- Sticky flight progress -->
+  <div class="flight-progress">
+    <div class="fp-track">
+      <span class="fp-city">CCU</span>
+      <div class="fp-bar">
+        <div class="fp-fill" id="flight-fill"></div>
+        <span class="fp-plane" id="flight-plane">✈️</span>
+      </div>
+      <span class="fp-city">BLR</span>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- Hero -->
+    <section class="section" data-reveal>
+      <h1 class="heading">Can't Wait To See You</h1>
+    </section>
+
+    <!-- Boarding Pass -->
+    <section class="section" data-reveal>
+      <div class="bp">
+        <div class="bp-tear-left"></div>
+        <div class="bp-tear-right"></div>
+        <div class="bp-inner">
+          <div class="bp-head">
+            <span class="bp-airline">💕 Vatsal Airlines</span>
+            <span class="bp-class">LOVE CLASS</span>
+          </div>
+          <div class="bp-divider"></div>
+          <div class="bp-route">
+            <div class="bp-city-block">
+              <span class="bp-code">CCU</span>
+              <span class="bp-name">Kolkata</span>
+            </div>
+            <div class="bp-flight-icon">
+              <div class="bp-dashed"></div>
+              <span class="bp-plane-icon">✈️</span>
+              <div class="bp-dashed"></div>
+            </div>
+            <div class="bp-city-block">
+              <span class="bp-code">BLR</span>
+              <span class="bp-name">Bangalore</span>
+            </div>
+          </div>
+          <div class="bp-details">
+            <div class="bp-detail"><span class="bp-detail-label">DATE</span><span class="bp-detail-value">05 APR 2026</span></div>
+            <div class="bp-detail"><span class="bp-detail-label">BOARDING</span><span class="bp-detail-value">23:20 IST</span></div>
+            <div class="bp-detail"><span class="bp-detail-label">PASSENGER</span><span class="bp-detail-value">SATHI ♥</span></div>
+            <div class="bp-detail"><span class="bp-detail-label">PICKED UP BY</span><span class="bp-detail-value">VATSAL 😊</span></div>
+          </div>
+          <div class="bp-barcode">
+            <div class="bp-barcode-lines"></div>
+            <span class="bp-barcode-text">V + S ✈️ BLR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-timeline" data-reveal>
+      <h2 class="section-title">The Wait So Far</h2>
+      <div class="tl-vertical">
+        <div class="tl-line-v"></div>
+        <div class="tl-item tl-left" data-reveal><div class="tl-dot"></div><div class="tl-card"><span class="tl-date">Mar 22</span><span class="tl-text">Sathi flew to Kolkata 🧳</span></div></div>
+        <div class="tl-item tl-right" data-reveal><div class="tl-dot"></div><div class="tl-card"><span class="tl-date">Mar 25</span><span class="tl-text">Texting "wyd" every 2 hrs 📱</span></div></div>
+        <div class="tl-item tl-left" data-reveal><div class="tl-dot"></div><div class="tl-card"><span class="tl-date">Mar 29</span><span class="tl-text">"5 more minutes" calls 🌙</span></div></div>
+        <div class="tl-item tl-right" data-reveal><div class="tl-dot"></div><div class="tl-card"><span class="tl-date">Apr 1</span><span class="tl-text">Okay this wait is too long 📅</span></div></div>
+        <div class="tl-item tl-center" data-reveal><div class="tl-dot tl-dot-final"></div><div class="tl-card tl-card-final"><span class="tl-date">Apr 5</span><span class="tl-text">Finally! 🫂</span></div></div>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="section" data-reveal>
+      <p class="cd-label">Sathi lands in...</p>
+      <div class="cd-timer">
+        <div class="cd-block"><span class="cd-val" id="days">00</span><span class="cd-unit">Days</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-block"><span class="cd-val" id="hours">00</span><span class="cd-unit">Hrs</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-block"><span class="cd-val" id="minutes">00</span><span class="cd-unit">Min</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-block"><span class="cd-val" id="seconds">00</span><span class="cd-unit">Sec</span></div>
+      </div>
+      <p class="msg" id="rotating-message"></p>
+      <p class="signed">— Vatsal, probably already at the airport way too early 😄</p>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
