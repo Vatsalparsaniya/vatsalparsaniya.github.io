@@ -58,7 +58,7 @@ body{
   font-size:clamp(2rem,8vw,3.2rem);
   background:linear-gradient(135deg,#f8bbd0,#f48fb1,#ec407a);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  line-height:1.2;
+  line-height:1.2;margin-bottom:20px;
 }
 
 /* ── Boarding Pass ── */
