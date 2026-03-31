@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:linear-gradient(180deg,#0a0015 0%,#0d0a2e 30%,#1a0a2e 60%,#0a0015 100%);
+  font-family:'Quicksand',sans-serif;color:#fce4ec;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;overflow-x:hidden;
+}
+
+#sky-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.floating-hearts{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.heart{position:absolute;bottom:-30px;opacity:0;animation:floatUp linear infinite;will-change:transform}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0) scale(1);opacity:0}
+  10%{opacity:.25}90%{opacity:.08}
+  100%{transform:translateY(-100vh) rotate(360deg) scale(.3);opacity:0}
+}
+
+/* ── Scroll Progress ── */
+.scroll-progress{
+  position:fixed;top:0;left:0;right:0;z-index:200;height:3px;
+  background:rgba(244,143,177,.1);
+}
+.scroll-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,#ec407a,#f48fb1,#ce93d8);
+  transition:width .15s ease;
+  box-shadow:0 0 10px rgba(233,30,99,.5);
+}
+
+/* ── Page ── */
+.page{
+  position:relative;z-index:2;
+  width:100%;max-width:600px;margin:0 auto;
+  padding:0 20px;
+}
+
+/* ── Sections ── */
+.section{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  min-height:100vh;min-height:100dvh;
+  padding:60px 0;
+  opacity:0;transform:translateY(40px);
+  transition:opacity .9s ease,transform .9s ease;
+}
+.section.visible{opacity:1;transform:translateY(0)}
+
+.section-title{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1.6rem,5.5vw,2.4rem);
+  background:linear-gradient(135deg,#f8bbd0,#f48fb1,#ec407a);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:8px;
+}
+.section-sub{
+  font-size:clamp(.8rem,2.5vw,.95rem);color:#f48fb1;opacity:.6;margin-bottom:24px;
+}
+
+/* ── Hero ── */
+.hero-title{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(2.4rem,9vw,3.8rem);
+  background:linear-gradient(135deg,#f8bbd0,#f48fb1,#ec407a,#ce93d8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1.2;margin-bottom:12px;
+  animation:glowTitle 4s ease-in-out infinite alternate;
+}
+@keyframes glowTitle{
+  from{filter:drop-shadow(0 0 8px rgba(233,30,99,.3))}
+  to{filter:drop-shadow(0 0 25px rgba(233,30,99,.6))}
+}
+.hero-sub{
+  font-size:clamp(1rem,3vw,1.2rem);opacity:.7;margin-bottom:24px;line-height:1.6;
+}
+.hero-hint{
+  font-size:clamp(.75rem,2vw,.9rem);color:#f48fb1;opacity:.4;
+  animation:fadeHint 3s ease-in-out infinite;
+}
+@keyframes fadeHint{0%,100%{opacity:.3}50%{opacity:.7}}
+.scroll-arrow{
+  margin-top:20px;font-size:1.5rem;
+  animation:bounce 2s ease-in-out infinite;color:#f48fb1;opacity:.5;
+}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ── Constellation Heart ── */
+.constellation-heart{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+}
+
+/* ── Memory Jar ── */
+.jar-container{
+  display:flex;justify-content:center;align-items:center;
+  margin-top:16px;
+}
+.jar{
+  position:relative;width:clamp(180px,50vw,240px);
+}
+.jar-lid{
+  width:70%;margin:0 auto;height:18px;
+  background:linear-gradient(180deg,#b0bec5,#78909c);
+  border-radius:6px 6px 0 0;
+  border:1px solid rgba(255,255,255,.15);
+  position:relative;z-index:3;
+}
+.jar-body{
+  width:100%;
+  min-height:clamp(200px,55vw,280px);
+  background:rgba(255,255,255,.04);
+  border:2px solid rgba(255,255,255,.1);
+  border-top:none;
+  border-radius:0 0 30px 30px;
+  position:relative;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:8px;padding:20px 12px;
+  overflow:hidden;
+}
+.jar-glow{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:80%;height:60%;
+  background:radial-gradient(ellipse,rgba(244,143,177,.08),transparent 70%);
+  pointer-events:none;
+}
+.memory-note{
+  width:clamp(48px,14vw,60px);height:clamp(48px,14vw,60px);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(244,143,177,.2);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:all .3s ease;
+  animation:wobble 4s ease-in-out infinite;
+  position:relative;z-index:2;
+}
+.memory-note:nth-child(2){animation-delay:.5s}
+.memory-note:nth-child(3){animation-delay:1s}
+.memory-note:nth-child(4){animation-delay:1.5s}
+.memory-note:nth-child(5){animation-delay:2s}
+.memory-note:nth-child(6){animation-delay:2.5s}
+@keyframes wobble{
+  0%,100%{transform:rotate(-3deg) translateY(0)}
+  25%{transform:rotate(2deg) translateY(-3px)}
+  50%{transform:rotate(-1deg) translateY(1px)}
+  75%{transform:rotate(3deg) translateY(-2px)}
+}
+.memory-note:hover,.memory-note:active{
+  transform:scale(1.15) rotate(0deg)!important;
+  border-color:rgba(244,143,177,.5);
+  box-shadow:0 0 20px rgba(233,30,99,.3);
+}
+.note-fold{font-size:clamp(1.2rem,4vw,1.6rem)}
+
+/* ── Note Modal ── */
+.note-modal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px}
+.note-modal.hidden{display:none}
+.note-modal-backdrop{position:absolute;inset:0;background:rgba(10,0,21,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.note-modal-content{position:relative;z-index:1;animation:popIn .4s ease}
+@keyframes popIn{from{transform:scale(.7) rotate(-5deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+.note-paper{
+  background:linear-gradient(145deg,#2d1b3e,#1a0a2e);
+  border:1px solid rgba(244,143,177,.3);
+  border-radius:16px;padding:clamp(24px,6vw,40px);
+  max-width:340px;text-align:center;
+  box-shadow:0 20px 60px rgba(233,30,99,.15);
+  position:relative;
+}
+.note-text{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1.1rem,3.5vw,1.4rem);
+  line-height:1.6;color:#fce4ec;
+}
+.note-close{
+  position:absolute;top:10px;right:14px;
+  font-size:.9rem;color:#f48fb1;opacity:.5;cursor:pointer;
+  transition:opacity .2s;
+}
+.note-close:hover{opacity:1}
+
+/* ── Typewriter ── */
+.typewriter-container{margin:16px 0;width:100%;max-width:400px}
+.typewriter-paper{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(244,143,177,.15);
+  border-radius:12px;
+  padding:clamp(20px,5vw,32px);
+  min-height:120px;
+  position:relative;
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  text-align:left;
+}
+.paper-lines{
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    180deg,
+    transparent 0,transparent 28px,
+    rgba(244,143,177,.05) 28px,rgba(244,143,177,.05) 29px
+  );
+  border-radius:12px;pointer-events:none;
+}
+.typewriter-text{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1.1rem,3.5vw,1.35rem);
+  line-height:1.8;color:#fce4ec;
+  position:relative;z-index:1;
+  min-height:60px;
+}
+.typewriter-cursor{
+  display:inline;font-family:'JetBrains Mono',monospace;
+  color:#ec407a;animation:blink .8s step-end infinite;
+  font-weight:700;
+}
+@keyframes blink{50%{opacity:0}}
+.reason-counter{
+  font-family:'JetBrains Mono',monospace;
+  font-size:clamp(.65rem,2vw,.8rem);
+  color:#f48fb1;opacity:.4;margin:12px 0 8px;
+  letter-spacing:.05em;
+}
+.btn-next-reason{
+  background:linear-gradient(135deg,rgba(233,30,99,.2),rgba(233,30,99,.1));
+  border:1px solid rgba(244,143,177,.3);
+  color:#f48fb1;
+  font-family:'Quicksand',sans-serif;font-size:clamp(.85rem,2.5vw,1rem);
+  font-weight:600;
+  padding:10px 24px;border-radius:50px;
+  cursor:pointer;transition:all .3s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn-next-reason:hover,.btn-next-reason:active{
+  background:linear-gradient(135deg,rgba(233,30,99,.35),rgba(233,30,99,.2));
+  border-color:rgba(244,143,177,.5);
+  box-shadow:0 0 20px rgba(233,30,99,.2);
+  transform:scale(1.05);
+}
+
+/* ── Vinyl / Playlist ── */
+.vinyl-player{
+  position:relative;width:clamp(120px,35vw,160px);height:clamp(120px,35vw,160px);
+  margin:0 auto 24px;
+}
+.vinyl{
+  width:100%;height:100%;border-radius:50%;
+  background:repeating-radial-gradient(
+    circle,#1a1a2e 0,#1a1a2e 3px,#0d0d1a 3px,#0d0d1a 6px
+  );
+  border:3px solid rgba(244,143,177,.15);
+  display:flex;align-items:center;justify-content:center;
+  animation:spin 8s linear infinite;
+  animation-play-state:paused;
+}
+.vinyl.spinning{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vinyl-label{
+  width:40%;height:40%;border-radius:50%;
+  background:linear-gradient(135deg,#ec407a,#ad1457);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2px;
+}
+.vinyl-heart{font-size:clamp(.8rem,2.5vw,1rem)}
+.vinyl-text{font-family:'JetBrains Mono',monospace;font-size:clamp(.4rem,1.2vw,.55rem);color:#fff;font-weight:600;letter-spacing:.1em}
+.vinyl-arm{
+  position:absolute;top:-5px;right:-10px;
+  width:4px;height:50%;
+  background:linear-gradient(180deg,#78909c,#b0bec5);
+  border-radius:2px;
+  transform-origin:top center;
+  transform:rotate(-30deg);
+  transition:transform .5s ease;
+}
+.vinyl-arm.playing{transform:rotate(-10deg)}
+
+.song-list{
+  display:flex;flex-direction:column;gap:10px;
+  width:100%;max-width:380px;
+}
+.song-card{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(244,143,177,.12);
+  border-radius:12px;padding:12px 16px;
+  cursor:pointer;transition:all .3s ease;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.song-card:hover,.song-card:active,.song-card.active{
+  border-color:rgba(244,143,177,.4);
+  background:rgba(233,30,99,.08);
+  box-shadow:0 4px 20px rgba(233,30,99,.12);
+  transform:translateX(4px);
+}
+.song-emoji{font-size:clamp(1.2rem,4vw,1.6rem);flex-shrink:0}
+.song-info{display:flex;flex-direction:column;flex:1;text-align:left}
+.song-name{font-weight:700;font-size:clamp(.85rem,2.5vw,1rem)}
+.song-artist{font-size:clamp(.65rem,2vw,.8rem);color:#f48fb1;opacity:.6}
+.song-reason{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(.6rem,1.8vw,.75rem);
+  color:#ce93d8;opacity:0;
+  max-width:0;overflow:hidden;white-space:nowrap;
+  transition:all .4s ease;
+}
+.song-card:hover .song-reason,.song-card.active .song-reason{
+  opacity:.8;max-width:200px;margin-left:4px;
+}
+
+/* ── Promise Wall ── */
+.promise-wall{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  width:100%;max-width:400px;
+}
+.promise-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(244,143,177,.12);
+  border-radius:14px;padding:clamp(14px,4vw,20px);
+  text-align:center;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  opacity:0;transform:translateY(20px) scale(.95);
+  transition:all .6s ease;
+  transition-delay:var(--delay);
+}
+.section-promises.visible .promise-card{
+  opacity:1;transform:translateY(0) scale(1);
+}
+.promise-card:hover{
+  border-color:rgba(244,143,177,.35);
+  box-shadow:0 4px 24px rgba(233,30,99,.1);
+  transform:translateY(-3px) scale(1.02);
+}
+.promise-icon{font-size:clamp(1.4rem,5vw,2rem);margin-bottom:8px;display:block}
+.promise-card p{
+  font-size:clamp(.7rem,2.2vw,.85rem);
+  line-height:1.5;opacity:.8;
+}
+
+/* ── Final Section ── */
+.section-final{position:relative;min-height:100vh;min-height:100dvh}
+.fireflies{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.firefly{
+  position:absolute;width:4px;height:4px;border-radius:50%;
+  background:#fff59d;
+  box-shadow:0 0 6px 2px rgba(255,245,157,.4),0 0 12px 4px rgba(255,245,157,.2);
+  animation:drift linear infinite;
+  opacity:0;
+}
+@keyframes drift{
+  0%{transform:translate(0,0);opacity:0}
+  15%{opacity:.8}
+  50%{opacity:.4}
+  85%{opacity:.7}
+  100%{transform:translate(var(--dx),var(--dy));opacity:0}
+}
+
+.final-letter{
+  max-width:400px;text-align:center;position:relative;z-index:2;
+}
+.final-line{
+  font-size:clamp(.95rem,3vw,1.15rem);
+  line-height:1.8;opacity:0;
+  transform:translateY(15px);
+  transition:all .8s ease;
+}
+.section-final.visible .final-line{opacity:.85;transform:translateY(0)}
+.section-final.visible .fl-1{transition-delay:.2s}
+.section-final.visible .fl-2{transition-delay:.6s}
+.section-final.visible .fl-3{transition-delay:1s}
+.section-final.visible .fl-4{transition-delay:1.4s}
+.section-final.visible .fl-5{transition-delay:1.8s}
+.section-final.visible .fl-6{transition-delay:2.2s;color:#f48fb1}
+.final-line:first-child{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1.4rem,4.5vw,1.8rem);
+  color:#f48fb1;
+}
+.final-signed{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1rem,3vw,1.3rem);
+  color:rgba(244,143,177,.5);
+  margin-top:20px;
+  opacity:0;transform:translateY(10px);
+  transition:all .8s ease;
+  animation:pulse 3s ease-in-out infinite;
+  animation-play-state:paused;
+}
+.section-final.visible .final-signed{
+  opacity:1;transform:translateY(0);
+  transition-delay:2.8s;
+  animation-play-state:running;
+}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:.9}}
+
+.final-heart-burst{
+  position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;
+}
+
+/* ── Responsive ── */
+@media(max-width:400px){
+  .promise-wall{grid-template-columns:1fr;max-width:280px}
+  .song-reason{display:none}
+}
+@media(min-width:769px){
+  .section{min-height:100vh}
+  .song-card{padding:14px 20px}
+}

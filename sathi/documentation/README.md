@@ -21,6 +21,18 @@ sathi/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
+├── memory-lane/                ← Event: Scroll journey through memories
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── blooming-heart/             ← Event: Blooming flower heart + code letter
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── coupon-book/                ← Event: Love coupon book with PIN lock
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 ├── <future-event>/             ← Each new event gets its own folder
 │   ├── index.html
 │   ├── style.css
@@ -39,6 +51,9 @@ sathi/
 |-------------------|--------------------------------------------------|--------|
 | `date-ask/`       | "Will you go on a date with me?" 🌹               | ✅ Done |
 | `airport-pickup/` | Flight tracker CCU→BLR with countdown & welcome 🛬 | ✅ Done |
+| `memory-lane/`    | Interactive scroll journey through memories 🌌     | ✅ Done |
+| `blooming-heart/` | Blooming flower heart animation with love letter 🌸 | ✅ Done |
+| `coupon-book/`    | Love coupon book with PIN lock 💝                   | ✅ Done |
 
 ---
 
@@ -131,3 +146,60 @@ Personalized countdown page for Sathi's flight from Kolkata (CCU) to Bangalore (
 - **12 personalized rotating messages** — all written from Vatsal to Sathi by name, cycling every 5 seconds
 - **Signed** "Vatsal, already at BLR waiting for you 💌"
 - **Performance:** reduced stars/hearts on mobile, debounced resize
+
+---
+
+## memory-lane/ — Details
+
+An interactive, scroll-driven journey through Vatsal & Sathi's relationship. Six full-screen sections, each with unique interactions and animations.
+
+### Sections
+
+1. **Hero with Constellation Sky** — Twinkling star-field canvas, animated title with gradient glow, scroll-down hint with bouncing arrow
+2. **Memory Jar 🫙** — A glass jar containing 6 tappable memory notes. Each note opens a modal with a personalized memory written from Vatsal. Notes wobble gently inside the jar with a soft glow underneath
+3. **Reasons I Love You 💝** — Typewriter effect that types out reasons one by one on lined paper. "Tell me another" button cycles through 15 personalized reasons with a character-by-character animation (35ms per char)
+4. **Songs That Remind Me of You 🎵** — Vinyl record player with spinning animation. 4 song cards (mix of English & Hindi). Tapping a song spins the vinyl and moves the arm. Each card reveals a personal quote on hover/tap
+5. **Promise Wall 🤞** — 2-column grid of 6 glassmorphic promise cards. Each card staggers in with a cascading delay when scrolled into view. Promises are sweet, funny, and personal
+6. **Final Letter with Fireflies** — Warm closing letter with lines that fade in sequentially. Fireflies drift across the screen. Heart burst animation triggers on entry. Signed from Vatsal
+
+### Shared Features
+- Twinkling star-field canvas background
+- Floating heart emojis
+- Pink gradient scroll progress bar at top
+- IntersectionObserver-based scroll reveal for all sections
+- Fully responsive (clamp-based sizing, single-column promises on small screens)
+- Dark romantic theme matching the project design language
+- Performance-conscious (capped particles, debounced resize)
+
+---
+
+## blooming-heart/ — Details
+
+Inspired by [ritvikbhatia/LoveProject](https://github.com/ritvikbhatia/LoveProject)'s blooming heart canvas animation. Rewritten from scratch with no jQuery dependency, using modern ES6 classes, adapted to the Sathi project's dark romantic theme with pink/rose bloom colors.
+
+### Content
+A code-style love letter referencing real memories — Loco Bear arcade date, winning 3 toys, chai sessions, ice cream runs, cooking together (Bengali dish + dal), Mogu Mogu strawberry, good conversations. Tone is early-days: warm, playful, no big declarations. Closing line: "I don't know what to call this yet, but I know I don't want it to stop."
+
+### How It Works
+- Page loads → the code letter types itself out character by character (typewriter effect)
+- A pulsing ❤️ button appears at the end of the letter
+- Tapping the heart triggers the **blooming heart animation** on the canvas below (mobile) or beside (desktop)
+- Flowers bloom along a parametric heart curve (`16sin³(t)` formula), each flower made of 8–15 bezier-curve petals
+- Canvas uses `globalCompositeOperation: 'lighter'` for a glowing additive-blend effect
+- The heart is purely visual — no text overlay inside it
+
+### Technical Details
+- **Vector class** — rotation, scaling, cloning for petal geometry
+- **Petal class** — bezier curve petals that grow outward from center (lineWidth 1.5)
+- **Bloom class** — a single flower with randomized petal count, stretch, and color
+- **GardenCanvas class** — manages the canvas, render loop (60fps), bloom lifecycle, DPR-aware sizing
+- **Heart curve** — `getHeartPoint()` plots points along the classic parametric heart, scaled to CSS pixel size
+- **Typewriter** — pure JS, handles HTML tags, shows blinking cursor, uses event delegation for the button (since innerHTML rebuild destroys original DOM)
+- **Colors** — pink/rose/magenta palette (r:180–255, g:50–150, b:80–180) at 0.3 opacity for the glow effect
+- **DPR scaling** — canvas uses `devicePixelRatio` for crisp rendering on high-DPI Android/iOS screens
+
+### Layout
+- Mobile-first: letter on top, blooming heart below (column layout)
+- Desktop (900px+): side-by-side (letter left, heart right)
+- Fully responsive with clamp-based sizing
+- Minimal floating hearts (max 3, slow spawn)

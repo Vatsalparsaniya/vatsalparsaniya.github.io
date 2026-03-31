@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Our Memory Lane 🌌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="sky-canvas"></canvas>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress">
+    <div class="scroll-fill" id="scroll-fill"></div>
+  </div>
+
+  <main class="page">
+
+    <!-- Section 1: Hero with constellation heart -->
+    <section class="section section-hero" data-reveal>
+      <div class="constellation-heart" id="constellation"></div>
+      <h1 class="hero-title">Our Memory Lane</h1>
+      <p class="hero-sub">A little journey through us... ✨</p>
+      <p class="hero-hint">Scroll down to walk with me 💫</p>
+      <div class="scroll-arrow">
+        <span>↓</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Memory Jar -->
+    <section class="section section-jar" data-reveal>
+      <h2 class="section-title">Our Memory Jar 🫙</h2>
+      <p class="section-sub">Tap a memory to unfold it</p>
+      <div class="jar-container">
+        <div class="jar">
+          <div class="jar-lid"></div>
+          <div class="jar-body">
+            <div class="memory-note" data-color="#f48fb1" data-memory="The first time you laughed at my terrible joke... and I knew I was done for 😄💕">
+              <span class="note-fold">💌</span>
+            </div>
+            <div class="memory-note" data-color="#ce93d8" data-memory="That late night call where we both fell asleep but neither wanted to hang up 🌙">
+              <span class="note-fold">💜</span>
+            </div>
+            <div class="memory-note" data-color="#ef9a9a" data-memory="When you sent me that random 'I miss you' text and my heart did a backflip 📱❤️">
+              <span class="note-fold">💗</span>
+            </div>
+            <div class="memory-note" data-color="#80cbc4" data-memory="The way you scrunch your nose when you're thinking... I could watch that forever 🤭">
+              <span class="note-fold">🩵</span>
+            </div>
+            <div class="memory-note" data-color="#fff59d" data-memory="Our first 'goodnight' that turned into a 3-hour conversation ✨🌙">
+              <span class="note-fold">💛</span>
+            </div>
+            <div class="memory-note" data-color="#ffab91" data-memory="Every time you say 'Vatsal...' in that tone — I already know I'm in trouble 😂💕">
+              <span class="note-fold">🧡</span>
+            </div>
+          </div>
+          <div class="jar-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Typewriter "Reasons I Love You" -->
+    <section class="section section-reasons" data-reveal>
+      <h2 class="section-title">Reasons I Love You 💝</h2>
+      <div class="typewriter-container">
+        <div class="typewriter-paper">
+          <div class="paper-lines"></div>
+          <div class="typewriter-text" id="typewriter-text"></div>
+          <div class="typewriter-cursor" id="cursor">|</div>
+        </div>
+      </div>
+      <div class="reason-counter">
+        <span id="reason-num">1</span> of <span id="reason-total">∞</span>
+      </div>
+      <button class="btn-next-reason" id="btn-next">Tell me another 💫</button>
+    </section>
+
+    <!-- Section 4: Our Song / Playlist Mood -->
+    <section class="section section-playlist" data-reveal>
+      <h2 class="section-title">Songs That Remind Me of You 🎵</h2>
+      <div class="vinyl-player">
+        <div class="vinyl" id="vinyl">
+          <div class="vinyl-label">
+            <span class="vinyl-heart">💗</span>
+            <span class="vinyl-text">V + S</span>
+          </div>
+        </div>
+        <div class="vinyl-arm" id="vinyl-arm"></div>
+      </div>
+      <div class="song-list">
+        <div class="song-card" data-song="1">
+          <span class="song-emoji">🌙</span>
+          <div class="song-info">
+            <span class="song-name">Perfect</span>
+            <span class="song-artist">Ed Sheeran</span>
+          </div>
+          <span class="song-reason">"Darling you look perfect tonight"</span>
+        </div>
+        <div class="song-card" data-song="2">
+          <span class="song-emoji">☀️</span>
+          <div class="song-info">
+            <span class="song-name">Tum Hi Ho</span>
+            <span class="song-artist">Arijit Singh</span>
+          </div>
+          <span class="song-reason">"Because you're my everything"</span>
+        </div>
+        <div class="song-card" data-song="3">
+          <span class="song-emoji">✨</span>
+          <div class="song-info">
+            <span class="song-name">All of Me</span>
+            <span class="song-artist">John Legend</span>
+          </div>
+          <span class="song-reason">"All of me loves all of you"</span>
+        </div>
+        <div class="song-card" data-song="4">
+          <span class="song-emoji">🦋</span>
+          <div class="song-info">
+            <span class="song-name">Tera Ban Jaunga</span>
+            <span class="song-artist">Akhil & Tulsi</span>
+          </div>
+          <span class="song-reason">"Main tera ban jaunga..."</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Promise Wall -->
+    <section class="section section-promises" data-reveal>
+      <h2 class="section-title">My Promises To You 🤞</h2>
+      <div class="promise-wall">
+        <div class="promise-card" style="--delay:0s">
+          <div class="promise-icon">🌅</div>
+          <p>I promise to be your morning text and your goodnight call</p>
+        </div>
+        <div class="promise-card" style="--delay:0.15s">
+          <div class="promise-icon">🍕</div>
+          <p>I promise to always share the last slice (okay, maybe)</p>
+        </div>
+        <div class="promise-card" style="--delay:0.3s">
+          <div class="promise-icon">🤗</div>
+          <p>I promise to give you the tightest hugs on your worst days</p>
+        </div>
+        <div class="promise-card" style="--delay:0.45s">
+          <div class="promise-icon">🌧️</div>
+          <p>I promise to be your umbrella, even when I'm getting soaked</p>
+        </div>
+        <div class="promise-card" style="--delay:0.6s">
+          <div class="promise-icon">😂</div>
+          <p>I promise to make you laugh, even with my worst jokes</p>
+        </div>
+        <div class="promise-card" style="--delay:0.75s">
+          <div class="promise-icon">♾️</div>
+          <p>I promise to choose you, every single day, without hesitation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Final Message with Fireflies -->
+    <section class="section section-final" data-reveal>
+      <div class="fireflies" id="fireflies"></div>
+      <div class="final-letter">
+        <p class="final-line fl-1">Sathi,</p>
+        <p class="final-line fl-2">Every memory with you is a little universe I never want to leave.</p>
+        <p class="final-line fl-3">You make the ordinary feel like magic,</p>
+        <p class="final-line fl-4">and the distance feel like nothing.</p>
+        <p class="final-line fl-5">This page is just a tiny piece of how much you mean to me.</p>
+        <p class="final-line fl-6">But I'll spend forever showing you the rest. 💕</p>
+        <p class="final-signed">— Forever yours, Vatsal 💌</p>
+      </div>
+      <div class="final-heart-burst" id="heart-burst"></div>
+    </section>
+
+  </main>
+
+  <!-- Memory note modal -->
+  <div class="note-modal hidden" id="note-modal">
+    <div class="note-modal-backdrop" id="note-backdrop"></div>
+    <div class="note-modal-content" id="note-content">
+      <div class="note-paper">
+        <p class="note-text" id="note-text"></p>
+        <span class="note-close" id="note-close">✕</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
