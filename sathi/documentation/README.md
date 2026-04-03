@@ -29,10 +29,21 @@ sathi/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
-├── coupon-book/                ← Event: Love coupon book with PIN lock
+├── bangalore-dreams/           ← Event: Bangalore wishlist mood board
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
+├── flower-vase/                ← Event: Interactive flower garden
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── fruit-attack/               ← Event: Fruit prank page to annoy Sathi
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── hot-wheels/                 ← Event: (WIP)
+│   └── images/
+├── wallet-photo/               ← Event: (WIP — empty)
 ├── <future-event>/             ← Each new event gets its own folder
 │   ├── index.html
 │   ├── style.css
@@ -53,7 +64,11 @@ sathi/
 | `airport-pickup/` | Flight tracker CCU→BLR with countdown & welcome 🛬 | ✅ Done |
 | `memory-lane/`    | Interactive scroll journey through memories 🌌     | ✅ Done |
 | `blooming-heart/` | Blooming flower heart animation with love letter 🌸 | ✅ Done |
-| `coupon-book/`    | Love coupon book with PIN lock 💝                   | ✅ Done |
+| `bangalore-dreams/`| Bangalore places wishlist mood board ✈️            | ✅ Done |
+| `flower-vase/`    | Interactive flower garden with whispered thoughts 🌷| ✅ Done |
+| `fruit-attack/`   | Fruit prank — raining fruits to annoy Sathi 🍉      | ✅ Done |
+| `hot-wheels/`     | (Work in progress) 🏎️                             | 🚧 WIP |
+| `wallet-photo/`   | (Work in progress) 📸                              | 🚧 WIP |
 
 ---
 
@@ -203,3 +218,119 @@ A code-style love letter referencing real memories — Loco Bear arcade date, wi
 - Desktop (900px+): side-by-side (letter left, heart right)
 - Fully responsive with clamp-based sizing
 - Minimal floating hearts (max 3, slow spawn)
+
+---
+
+## bangalore-dreams/ — Details
+
+A mood board of aesthetic Bangalore places Vatsal and Sathi will explore together. Completely different visual style from other events — editorial, magazine-like with a masonry grid layout.
+
+### Design
+- **Fonts:** `Cormorant Garamond` (elegant serif headings) + `Inter` (clean body) — distinct from other events
+- **Color palette:** Deep dark backgrounds with warm cream/gold accents, muted earth tones
+- **Cursor glow** — a soft radial glow follows the mouse on desktop
+- **Floating particle canvas** — subtle ambient particles in the background
+
+### Sections
+
+1. **Hero** — Full-viewport with "Bangalore Dreams" title, "someday, together" whisper, scroll hint with animated line
+2. **Intro** — "Not all those who wander are lost" quote, sets the tone for the page
+3. **Places Grid (Masonry)** — 9 place cards in a CSS masonry layout with tilt effect on hover:
+   - Lalbagh Botanical Garden, Bangalore Palace, Jacaranda Streets, Rooftop Sunset, Cubbon Park, Night Market Walks, Flower Shows, Ulsoor Lake, Café Hopping
+   - Each card has a numbered badge, image from Unsplash/Pexels (free), description, and mood tag
+   - Cards come in `tall` and `wide` variants for visual rhythm
+4. **Promise Section** — "This isn't just a page. It's a promise." closing message
+5. **Footer** — Hearts, "made with love, for Sathi", photo credits
+
+### Technical
+- Images loaded lazily via `loading="lazy"`
+- `data-tilt` attribute on cards for interactive tilt (handled in script.js)
+- Scroll-reveal animations via IntersectionObserver
+- Responsive masonry grid collapses to single column on mobile
+
+---
+
+## flower-vase/ — Details
+
+An interactive single-viewport flower garden where Sathi taps to grow flowers, each revealing a whispered thought. Completely unique aesthetic — minimal, dark, poetic. No scrolling.
+
+### Design Philosophy
+- **Intentionally different** from all other events — no Dancing Script, no pink gradients, no floating hearts
+- **Fonts:** `Playfair Display` (serif titles) + `Space Grotesk` (minimal UI) + `Caveat` (handwritten whispers)
+- **Color palette:** Near-black background (#070710), warm gold/earth accents, muted greens for stems
+- **Mood:** Quiet, intimate, like a secret garden at night
+
+### Experience Flow
+
+1. **Intro overlay** — Starfield canvas background, seed emoji with bounce animation, "A Little Garden / that grows only for you, Sathi / tap, and watch a thought bloom", button: "plant our story"
+2. **Garden scene** — Single viewport, no scroll. Hint text: "tap anywhere to grow a thought." SVG ceramic vase at bottom with "V + S" label and heart engraving. Golden firefly particles drift across the dark background
+3. **Planting flowers** — Each tap above the vase grows a flower with:
+   - Animated stem (bezier curve with personality — each stem curves differently)
+   - Organic leaves with veins that unfurl as the stem grows
+   - 3 flower types: round petals, pointed petals, daisy-style elongated petals
+   - 10 color palettes (rose, lavender, sunflower, sky, coral, blush, mint, marigold, plum, honey)
+   - Soft glow halo around each bloom
+   - Gentle sway animation simulating a breeze
+   - Petal burst particles (circles + stars) on plant
+4. **Whispered thoughts** — Each flower reveals a unique poetic line in Caveat font, floating as a toast:
+   - "you showed up and the noise went quiet"
+   - "some people feel like home before you even arrive"
+   - "there's a version of me that only exists when you're around"
+   - "you're the 2am thought that stays till morning"
+   - ...14 total, all original — no overlap with blooming-heart or memory-lane content
+5. **Final letter** — After all 14 thoughts are planted, a full-screen overlay fades in with a staggered letter:
+   - "if feelings were seeds, you'd have a forest by now... but I started with a garden"
+   - Tap to dismiss and return to the garden
+6. **Counter** — "X thoughts bloomed" tracks progress
+
+### Technical Details
+- **Canvas rendering** — flowers drawn on HTML5 canvas for smooth 60fps animation
+- **Bezier stems** — `bezierCurveTo` with randomized control points for organic curves
+- **Leaf geometry** — custom bezier leaf shapes with vein detail
+- **3 petal renderers** — `drawRoundPetals()`, `drawPointedPetals()`, `drawDaisyPetals()` for visual variety
+- **easeOutBack** easing on bloom animation for a satisfying pop
+- **DPR-aware** — canvas scales with `devicePixelRatio` for crisp rendering
+- **Touch support** — `touchstart` handler with `preventDefault` for mobile
+- **No scrolling** — `overflow: hidden` on html/body, all elements `position: fixed/absolute`
+- **Memory toast** — CSS animation `toastIn` with scale + fade for each whispered thought
+- **Fireflies** — 30 ambient particles with independent drift angles, alpha oscillation, and warm golden glow
+- **Intro stars** — 80 twinkling stars on the intro overlay canvas
+
+---
+
+## fruit-attack/ — Details
+
+A playful prank page designed to annoy Sathi with her least favorite thing — fruits. Three-stage experience, all viewport-locked with zero scrolling.
+
+### Design
+- **Intentionally different** from the romantic events — bright, chaotic, funny
+- **Fonts:** `Dancing Script` (headings) + `Quicksand` (body) — consistent with project
+- **Color palette:** Stage 1 uses the dark romantic theme (bait), Stage 2 explodes into orange/amber, Stage 3 shifts to green
+- **Mood:** Innocent → chaotic → inescapable
+
+### Experience Flow
+
+1. **Intro (The Bait)** — Dark romantic background matching the project theme. Gift emoji with wiggle animation, "Hey Sathi! I made something special for you...", pink "Open Your Gift 💝" button. Looks completely innocent and sweet
+2. **Chaos (The Attack)** — Orange gradient background. Fruits rain from the sky (3 spawned every 200ms). 6 emoji fruits orbit the center. Rotating messages cycle every 2 seconds:
+   - "EAT FRUITS SATHI 🍌"
+   - "You can't escape 🍇"
+   - "Fruits love you 🍓"
+   - "One mango? Please? 🥭"
+   - ...10 total messages
+   - "Make It Stop 😭" button that dodges away from the mouse 3 times on desktop before allowing a click
+3. **Finale (No Escape)** — Green gradient background. 20 randomly placed spinning fruit emojis. Giant rotating fruit in center. Cycling messages every 3 seconds:
+   - "You thought you could escape fruits?"
+   - "Potassium is chasing you — You literally cannot run from bananas 🏃‍♀️💨"
+   - "An apple a day keeps nobody away from annoying you 😈"
+   - "Mango says hi — It's the king of fruits. Bow down, Sathi. 👑"
+   - "Strawberry forever — Sweet, red, and absolutely not leaving you alone 💃"
+
+### Technical Details
+- **14 fruit emojis** — 🍎🍌🍇🍉🍓🍑🥭🍍🥝🍒🍊🫐🍋🥥 (no image downloads needed)
+- **No scrolling** — `overflow: hidden` on html/body, all screens `position: fixed`
+- **Screen transitions** — opacity-based with pointer-events toggle
+- **Rain system** — DOM elements with CSS `fall` animation, auto-removed on `animationend`
+- **Orbit system** — CSS `rotate + translateX + counter-rotate` trick for circular paths
+- **Escape button dodge** — `mouseenter` handler repositions button via `translate()` (3 dodges max)
+- **Responsive** — `clamp()` sizing throughout, works on phone and desktop
+- **Zero dependencies** — pure HTML/CSS/JS, emoji-only graphics

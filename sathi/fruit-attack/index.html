@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>A Gift For Sathi 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Innocent opening screen -->
+  <div id="intro" class="screen active">
+    <div class="intro-content">
+      <div class="gift-emoji">🎁</div>
+      <h1>Hey Sathi!</h1>
+      <p>I made something special for you...</p>
+      <button id="open-btn" aria-label="Open the gift">Open Your Gift 💝</button>
+    </div>
+  </div>
+
+  <!-- Canvas fruit chaos -->
+  <div id="chaos" class="screen">
+    <canvas id="fruit-canvas"></canvas>
+    <div id="center-msg">
+      <div class="msg-text" id="msg-text">🍎 SURPRISE! 🍎</div>
+    </div>
+    <div id="slice-hint">Swipe the fruits to slice them! 🔪</div>
+    <button id="escape-btn" aria-label="Try to escape">Make It Stop 😭</button>
+  </div>
+
+  <!-- Finale -->
+  <div id="finale" class="screen">
+    <canvas id="finale-canvas"></canvas>
+    <div class="finale-content">
+      <div id="finale-fruit-display"></div>
+      <h2 id="finale-msg">You thought you could escape fruits?</h2>
+      <p class="sub-msg" id="sub-msg">Never. They love you. Eat them. 🥭🍇🍓</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

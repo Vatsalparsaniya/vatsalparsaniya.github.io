@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>A Garden for Sathi 🌷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Intro overlay -->
+  <div class="intro-overlay" id="introOverlay">
+    <canvas id="introStars"></canvas>
+    <div class="intro-content">
+      <div class="intro-seed">🌱</div>
+      <h1 class="intro-title">A Little Garden</h1>
+      <p class="intro-sub">that grows only for you, Sathi</p>
+      <p class="intro-whisper">tap, and watch a thought bloom</p>
+      <button class="intro-btn" id="startBtn" aria-label="Start the experience">
+        <span>plant our story</span>
+        <div class="btn-glow"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main scene -->
+  <div class="scene" id="scene">
+    <canvas id="ambientCanvas"></canvas>
+
+    <!-- Hint -->
+    <div class="hint" id="hint">
+      <span>✨ tap anywhere to grow a thought ✨</span>
+    </div>
+
+    <!-- Memory message that appears with each flower -->
+    <div class="memory-toast" id="memoryToast">
+      <p id="memoryText"></p>
+    </div>
+
+    <!-- Flower counter -->
+    <div class="flower-counter" id="flowerCounter">
+      <span id="count">0</span> <span id="counterLabel">thoughts bloomed</span>
+    </div>
+
+    <!-- Canvas for flowers -->
+    <canvas id="flowerCanvas"></canvas>
+
+    <!-- Ground / grass area -->
+    <div class="ground" id="ground"></div>
+
+    <!-- SVG Vase -->
+    <div class="vase-container" id="vaseContainer">
+      <div class="vase-label">V + S</div>
+      <svg class="vase" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="vaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e8d5c4;stop-opacity:0.9" />
+            <stop offset="50%" style="stop-color:#d4a574;stop-opacity:0.95" />
+            <stop offset="100%" style="stop-color:#c4956a;stop-opacity:0.9" />
+          </linearGradient>
+          <linearGradient id="vaseShine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+            <stop offset="40%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:0.3" />
+            <stop offset="60%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+          </linearGradient>
+          <filter id="vaseShadow">
+            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0,0,0,0.25)" />
+          </filter>
+        </defs>
+        <path d="M60,40 Q55,40 50,60 Q35,120 45,170 Q50,195 70,200 L130,200 Q150,195 155,170 Q165,120 150,60 Q145,40 140,40 Z" 
+              fill="url(#vaseGrad)" filter="url(#vaseShadow)" />
+        <ellipse cx="100" cy="40" rx="42" ry="10" fill="#d4a574" stroke="#c4956a" stroke-width="1.5" />
+        <path d="M70,50 Q65,50 62,65 Q52,120 58,165 Q62,185 75,190 L90,190 Q80,185 75,165 Q68,120 76,65 Q78,50 75,50 Z" 
+              fill="url(#vaseShine)" opacity="0.6" />
+        <!-- Heart engraving on vase -->
+        <text x="100" y="130" text-anchor="middle" font-size="14" fill="rgba(180,130,90,0.5)" font-family="Caveat, cursive">♡</text>
+      </svg>
+    </div>
+
+    <!-- Secret message after all memories -->
+    <div class="final-reveal" id="finalReveal">
+      <div class="final-letter">
+        <p class="final-line">Sathi,</p>
+        <p class="final-line">if feelings were seeds,</p>
+        <p class="final-line">you'd have a forest by now.</p>
+        <p class="final-line spacer"></p>
+        <p class="final-line highlight">but I started with a garden.</p>
+        <p class="final-line spacer"></p>
+        <p class="final-line">every petal here is a quiet thought</p>
+        <p class="final-line">I never said out loud.</p>
+        <p class="final-line">every stem is a day I was glad</p>
+        <p class="final-line">you were in it.</p>
+        <p class="final-line spacer"></p>
+        <p class="final-line">this garden doesn't stop growing.</p>
+        <p class="final-line">neither do I — for you.</p>
+        <p class="final-signed">— V 🌷</p>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="bottom-note" id="bottomNote">
+      <p>a quiet place, just for us 🌷</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.screen.active { opacity: 1; pointer-events: all; }
+
+/* ── Intro ── */
+#intro { background: linear-gradient(135deg, #1a0011, #2d0a1e, #1a0a2e); }
+.intro-content { animation: fadeUp 1s ease; }
+.gift-emoji {
+  font-size: clamp(4rem, 15vw, 8rem);
+  animation: wiggle 1s ease-in-out infinite;
+}
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  background: linear-gradient(135deg, #f8bbd0, #f48fb1, #ec407a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0.5rem 0;
+}
+.intro-content p {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+#open-btn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 600;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ec407a, #f48fb1);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(236, 64, 122, 0.4);
+}
+#open-btn:hover { transform: scale(1.05); }
+#open-btn:active { transform: scale(0.97); }
+
+/* ── Chaos Screen ── */
+#chaos {
+  background: linear-gradient(135deg, #1a0a2e, #0d1b2a, #1b2838);
+  flex-direction: column;
+  overflow: hidden;
+}
+#fruit-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+#center-msg {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+.msg-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3), 2px 2px 8px rgba(0,0,0,0.5);
+  animation: pulse 0.8s ease-in-out infinite alternate;
+}
+#slice-hint {
+  position: fixed;
+  bottom: clamp(3.5rem, 8vw, 5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: fadeUp 1s ease 1s both;
+}
+#escape-btn {
+  position: fixed;
+  bottom: clamp(0.8rem, 3vw, 1.5rem);
+  z-index: 20;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: transform 0.15s;
+}
+#escape-btn:hover { transform: scale(1.05); }
+
+/* ── Finale ── */
+#finale {
+  background: linear-gradient(135deg, #1a3a1a, #0d2b0d, #1b3820);
+  flex-direction: column;
+  overflow: hidden;
+}
+#finale-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.finale-content {
+  position: relative;
+  z-index: 10;
+  padding: 1rem;
+}
+#finale-fruit-display {
+  font-size: clamp(5rem, 18vw, 9rem);
+  animation: floatBig 2s ease-in-out infinite;
+}
+#finale h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.2rem, 4.5vw, 2.2rem);
+  margin: 0.5rem 0;
+  text-shadow: 0 0 15px rgba(255,255,255,0.2), 2px 2px 6px rgba(0,0,0,0.5);
+}
+.sub-msg {
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  opacity: 0.8;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50%      { transform: rotate(5deg); }
+}
+@keyframes pulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+@keyframes floatBig {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-12px) scale(1.04); }
+}
