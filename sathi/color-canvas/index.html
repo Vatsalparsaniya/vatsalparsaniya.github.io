@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Color Our World 🎨 — For Sathi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Intro -->
+  <div class="intro" id="intro">
+    <canvas id="introCanvas"></canvas>
+    <div class="intro-inner">
+      <div class="intro-emoji">🎨</div>
+      <h1>Color Our World</h1>
+      <p class="intro-sub">a little coloring corner, just for you</p>
+      <p class="intro-whisper">because even black & white things<br>become beautiful when you touch them, Sathi</p>
+      <button id="startBtn">
+        <span>let's paint together 💕</span>
+      </button>
+      <p class="intro-signed">— V</p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery hidden" id="gallery">
+    <div class="gallery-header">
+      <h2>pick something to color, Sathi ✨</h2>
+      <p class="gallery-sub">tap any drawing you like</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+
+  <!-- Coloring Screen -->
+  <div class="coloring hidden" id="coloring">
+    <div class="top-bar">
+      <button class="icon-btn" id="backBtn">← back</button>
+      <span class="drawing-name" id="drawingName"></span>
+      <div class="top-actions">
+        <button class="icon-btn" id="undoBtn">↩ undo</button>
+        <button class="icon-btn save-btn" id="saveBtn">📥 save</button>
+      </div>
+    </div>
+    <div class="canvas-area" id="canvasArea">
+      <canvas id="mainCanvas"></canvas>
+    </div>
+    <div class="palette-bar" id="paletteBar"></div>
+    <div class="love-note" id="loveNote"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
