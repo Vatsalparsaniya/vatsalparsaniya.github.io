@@ -156,25 +156,30 @@ body {
 /* ── Memory Toast ── */
 .memory-toast {
   position: absolute;
-  top: 50%;
+  top: clamp(5rem, 14vw, 7rem);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 20;
   text-align: center;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.6s ease;
   max-width: 85vw;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(7, 7, 16, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .memory-toast.show {
   animation: toastIn 3s ease forwards;
 }
 .memory-toast p {
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
-  color: rgba(240, 230, 216, 0.8);
-  text-shadow: 0 0 30px rgba(212, 165, 116, 0.3);
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  color: rgba(240, 230, 216, 0.85);
+  text-shadow: 0 0 20px rgba(212, 165, 116, 0.25);
+  line-height: 1.5;
 }
 
 /* ── Flower Counter ── */
@@ -201,11 +206,11 @@ body {
 /* ── Vase ── */
 .vase-container {
   position: absolute;
-  bottom: clamp(2rem, 5vw, 4rem);
+  bottom: clamp(1.5rem, 4vw, 4rem);
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
-  width: clamp(100px, 25vw, 160px);
+  width: clamp(90px, 22vw, 160px);
   opacity: 0;
   animation: vaseAppear 1.2s ease 0.8s forwards;
 }
@@ -325,10 +330,10 @@ body {
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 @keyframes toastIn {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  75% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 0; transform: translate(-50%, -45%) scale(1); }
+  0% { opacity: 0; transform: translateX(-50%) scale(0.95); }
+  15% { opacity: 1; transform: translateX(-50%) scale(1); }
+  75% { opacity: 1; transform: translateX(-50%) scale(1); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-8px) scale(1); }
 }
 @keyframes letterLine {
   from { opacity: 0; transform: translateY(15px); }
