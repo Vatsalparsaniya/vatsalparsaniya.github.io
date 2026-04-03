@@ -140,11 +140,11 @@ body {
 /* ── Hint ── */
 .hint {
   position: absolute;
-  top: clamp(1.5rem, 5vw, 3rem);
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+  font-size: clamp(0.7rem, 2.2vw, 0.85rem);
   font-weight: 300;
   letter-spacing: 0.1em;
   opacity: 0;
@@ -156,20 +156,19 @@ body {
 /* ── Memory Toast ── */
 .memory-toast {
   position: absolute;
-  top: clamp(5rem, 14vw, 7rem);
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
   text-align: center;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.6s ease;
-  max-width: 85vw;
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  background: rgba(7, 7, 16, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  max-width: 88vw;
+  padding: 0.8rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(7, 7, 16, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .memory-toast.show {
   animation: toastIn 3s ease forwards;
@@ -177,8 +176,8 @@ body {
 .memory-toast p {
   font-family: 'Caveat', cursive;
   font-size: clamp(1.1rem, 4vw, 1.6rem);
-  color: rgba(240, 230, 216, 0.85);
-  text-shadow: 0 0 20px rgba(212, 165, 116, 0.25);
+  color: rgba(240, 230, 216, 0.9);
+  text-shadow: 0 0 20px rgba(212, 165, 116, 0.2);
   line-height: 1.5;
 }
 
