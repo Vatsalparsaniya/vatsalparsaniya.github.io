@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>A Gift For Sathi 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Intro -->
+  <div id="intro" class="screen active">
+    <div class="intro-content">
+      <div class="gift-emoji">🥔</div>
+      <h1>Hey Sathi!</h1>
+      <p>I heard you love potatoes... let's find out how much!</p>
+      <button id="open-btn" aria-label="Start the fry factory">Start Frying 🍟</button>
+    </div>
+  </div>
+
+  <!-- Fry Factory Game -->
+  <div id="game" class="screen">
+    <canvas id="game-canvas"></canvas>
+    <div id="hud">
+      <div id="score-display">🍟 <span id="score">0</span></div>
+      <div id="timer-display">⏱ <span id="timer">30</span>s</div>
+    </div>
+    <div id="center-msg">
+      <div class="msg-text" id="msg-text">🥔 TAP THE POTATOES! 🥔</div>
+    </div>
+    <div id="tap-hint">Tap potatoes to fry them into golden fries! 🍟</div>
+    <button id="skip-btn" aria-label="Skip to the end">I'm Full 😭</button>
+  </div>
+
+  <!-- Finale -->
+  <div id="finale" class="screen">
+    <canvas id="finale-canvas"></canvas>
+    <div class="finale-content">
+      <div id="finale-display">🍟</div>
+      <h2 id="finale-msg">Queen of Fries!</h2>
+      <p class="sub-msg" id="sub-msg">You fried them all. Proud of you, potato girl. 🥔💛</p>
+      <div id="final-score"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
