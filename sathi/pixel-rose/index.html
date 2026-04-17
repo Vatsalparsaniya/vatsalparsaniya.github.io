@@ -8,15 +8,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: #d5cfc5;
       overflow: hidden;
     }
     canvas {
-      width: min(96vw, 96vh);
-      height: min(96vw, 96vh);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-      border-radius: 2px;
+      display: block;
+      width: 100vw;
+      height: 100vh;
     }
   </style>
 </head>
@@ -27,9 +24,17 @@ const c = document.getElementById('c');
 const ctx = c.getContext('2d');
 
 const GRID = 26;
-const CELL = 36;
-const S = GRID * CELL;
-c.width = S; c.height = S;
+const dpr = window.devicePixelRatio || 1;
+const vw = window.innerWidth;
+const vh = window.innerHeight;
+c.width = vw * dpr;
+c.height = vh * dpr;
+c.style.width = vw + 'px';
+c.style.height = vh + 'px';
+ctx.scale(dpr, dpr);
+
+const S = Math.max(vw, vh);
+const CELL = Math.floor(Math.min(vw, vh) / GRID);
 
 // Palette — matching the reference image
 // 0=empty, 1=black, 2=dark red, 3=red, 4=light red, 5=dark green, 6=green, 7=light green
@@ -89,17 +94,23 @@ for (let row = GRID - 1; row >= 0; row--) {
 // --- RENDER ---
 function drawPaper() {
   ctx.fillStyle = '#fafafa';
-  ctx.fillRect(0, 0, S, S);
+  ctx.fillRect(0, 0, vw, vh);
 
-  // graph paper grid
+  // graph paper grid covering full screen
   ctx.lineWidth = 0.5;
-  ctx.strokeStyle = 'rgba(160,175,195,0.32)';
-  for (let i = 0; i <= GRID; i++) {
-    const pos = i * CELL;
-    ctx.beginPath(); ctx.moveTo(pos, 0); ctx.lineTo(pos, S); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(0, pos); ctx.lineTo(S, pos); ctx.stroke();
+  ctx.strokeStyle = 'rgba(160,175,195,0.30)';
+  for (let x = 0; x <= vw; x += CELL) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, vh); ctx.stroke();
+  }
+  for (let y = 0; y <= vh; y += CELL) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(vw, y); ctx.stroke();
   }
 }
+
+// Center the rose on screen (snapped to grid)
+const roseW = GRID * CELL;
+const OX = Math.floor((vw - roseW) / 2 / CELL) * CELL;
+const OY = Math.floor((vh - roseW) / 2 / CELL) * CELL;
 
 function drawCell(row, col, val, alpha = 1) {
   ctx.globalAlpha = alpha;
@@ -152,7 +163,7 @@ function render(now) {
 
       ctx.globalAlpha = alpha;
       ctx.fillStyle = PAL[p.v];
-      ctx.fillRect(p.c * CELL + offsetX, p.r * CELL, CELL, CELL);
+      ctx.fillRect(OX + p.c * CELL + offsetX, OY + p.r * CELL, CELL, CELL);
       ctx.globalAlpha = 1;
     }
   }
